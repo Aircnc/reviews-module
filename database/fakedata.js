@@ -20,10 +20,10 @@ var generatorReview = function(num) {
 
 	for (let i = 0; i < num; i++) {
 		var review = {};
-		review.name = faker.name.firstName();
-		review.avatar = faker.image.avatar();
-		review.content = faker.lorem.paragraph();
-		review.date = faker.date.month() + ' ' + randomYear();
+			review.name = faker.name.firstName();
+			review.avatar = faker.image.avatar();
+			review.content = faker.lorem.paragraph();
+			review.date = faker.date.month() + ' ' + randomYear();
 		fakeReviewData.push(review);
 	}
 	return fakeReviewData;
@@ -42,24 +42,26 @@ var generatorList = function(num) {
 
 	for (let i = 0; i < num; i++) {
 		var review = {};
-		review.name = faker.name.firstName();
-		review.avatar = faker.image.avatar();
-			review.star.accuracy = faker.finance.amount(0, 5, 1)
-			review.star.location = faker.finance.amount(0, 5, 1)
-			review.star.communitcation = faker.finance.amount(0, 5, 1)
-			review.star.checkin = faker.finance.amount(0, 5, 1)
-			review.star.clean = faker.finance.amount(0, 5, 1)
-			review.star.value = faker.finance.amount(0, 5, 1)
+			review.name = faker.name.firstName();
+			review.avatar = faker.image.avatar();
+			review.star_accuracy = faker.finance.amount(0, 5, 1)
+			review.star_location = faker.finance.amount(0, 5, 1)
+			review.star_communitcation = faker.finance.amount(0, 5, 1)
+			review.star_checkin = faker.finance.amount(0, 5, 1)
+			review.star_clean = faker.finance.amount(0, 5, 1)
+			review.star_value = faker.finance.amount(0, 5, 1)
 		fakeListData.push(review);
 	}
 	return fakeListData;
 }
 
+
 // console.log(faker.finance.amount(0, 5, 1))
 
+// console.log(generatorReview(1), generatorList(1))
 
-console.log(generatorList(1))
+module.exports.generatorReview = generatorReview;
 
-// module.exports.generator = generator;
+module.exports.generatorList = generatorList;
 
 
