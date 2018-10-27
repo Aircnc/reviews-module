@@ -1,14 +1,8 @@
-var data = require('./fakedata.js')
-const Sequelize = require('sequelize');
-
-const sequelize = new Sequelize('reviews_module', 'root', '', {
-  host: 'localhost',
-  dialect: 'mysql',
-  operatorsAliases: false
-});
+var Sequelize = require('sequelize');
+var db = require('./index.js');
 
 
-var Listings = sequelize.define('Listings', {
+var Listings = db.define('Listings', {
 	id: {type: Sequelize.INTEGER, 
 		autoIncrement: true, 
 		primaryKey: true
@@ -24,7 +18,7 @@ var Listings = sequelize.define('Listings', {
 });
 
 
-var Reviews = sequelize.define('Reviews', {
+var Reviews = db.define('Reviews', {
 	id: {type: Sequelize.INTEGER, 
 		autoIncrement: true, 
 		primaryKey: true
@@ -32,7 +26,7 @@ var Reviews = sequelize.define('Reviews', {
 	user: Sequelize.STRING,
 	avatar: Sequelize.STRING,
 	date: Sequelize.STRING,
-	content: Sequelize.STRING,
+	content: Sequelize.TEXT,
 	response: Sequelize.STRING
 });
 
@@ -40,23 +34,29 @@ var Reviews = sequelize.define('Reviews', {
 // also gives us the `.setUser` method available
 Reviews.belongsTo(Listings);
 
-Listings.hasMany(Reviews);
+Listings.hasMany(Reviews, {
+	foreignKey: {
+		name: "ListingId"
+	}
+});
 
 
-Listings.sync();
+// Listings.sync()
+// 	.then((err) => {
+// 		console.log('--------------------', err);
+// 		Reviews.sync();
+// 	});
 
-Reviews.sync();
+
 
 // console.log(data.generatorList(1), data.generatorReview(1))
 
-Listings.bulkCreate(data.generatorList(2))
-	.then(results => 
-		console.log(results))
-	.catch(error =>
-		console.log(error))
+// var seeding = function() {
 
+// }
 
-var seeding = function() {
+module.exports.Listings = Listings;
 
-}
+module.exports.Reviews = Reviews;
+
 

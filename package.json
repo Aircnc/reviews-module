@@ -9,10 +9,12 @@
   },
   "scripts": {
     "test": "jest",
+    "seed": "node database/seed.js",
     "dev": "webpack -d --watch",
     "start": "nodemon ./server/server.js"
   },
   "dependencies": {
+    "eslint": "^5.8.0",
     "express": "^4.16.4",
     "faker": "^4.1.0",
     "jest": "^23.6.0",
