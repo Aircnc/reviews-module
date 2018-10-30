@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const db = require('./index.js').sequelize;
+const db = require('./index.js');
 
 // console.log(db);
 
@@ -43,13 +43,11 @@ Listings.hasMany(Reviews, {
   },
 });
 
-
 // Listings.sync()
 // .then((err) => {
 // console.log('--------------------', err);
 // Reviews.sync();
 // });
-
 
 const findReviews = (id, callback) => {
   Reviews.findAll({
@@ -57,10 +55,19 @@ const findReviews = (id, callback) => {
       ListingId: id,
     },
   })
-    .then((err, results) => { callback(err, results); })
-    .then(() => { db.close(); });
+    .then((results) => { callback(null, results); })
+    .catch((error) => { callback(error, null); });
 };
 
+
+const findListing = (id, callback) => {
+  Listings.findById(id)
+    .then((results) => { callback(null, results); })
+    .catch((error) => { callback(error, null); });
+};
+
+
+// .then(() => { db.close(); });
 
 // console.log(data.generatorList(1), data.generatorReview(1))
 
@@ -70,3 +77,5 @@ module.exports.Listings = Listings;
 module.exports.Reviews = Reviews;
 
 module.exports.findReviews = findReviews;
+
+module.exports.findListing = findListing;

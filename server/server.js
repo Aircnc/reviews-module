@@ -8,7 +8,7 @@ const port = process.env.PORT || 3004;
 
 
 app.use(morgan('dev'));
-app.use(express.static(path.join(__dirname, '../client/dist')));
+app.use('/listings/:id', express.static(path.join(__dirname, '../client/dist')));
 
 
 app.get('/listings/:id/reviews', (request, response) => {
@@ -22,6 +22,19 @@ app.get('/listings/:id/reviews', (request, response) => {
     }
   });
 });
+
+
+app.get('/listings/:id/listings', (request, response) => {
+  const listId = request.params.id;
+  db.findListing(listId, (error, results) => {
+    if (error) {
+      response.status(500).send(error);
+    } else {
+      response.status(200).send(results);
+    }
+  });
+});
+
 
 app.listen(port, () => {
   console.log(`server running at: http://localhost:${port}`);
