@@ -1,7 +1,8 @@
 const webpack = require('webpack');
 const path = require('path');
-var src_dir = path.join(__dirname, './client/src');
-var dist_dir = path.join(__dirname, './client/dist');
+
+const src_dir = path.join(__dirname, './client/src');
+const dist_dir = path.join(__dirname, './client/dist');
 
 
 module.exports = {
@@ -14,7 +15,7 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader',
         options: {
-          presets: ['@babel/preset-env', '@babel/preset-react']
+          presets: ['@babel/preset-env', '@babel/preset-react'],
         },
       },
     ],
@@ -22,5 +23,8 @@ module.exports = {
   output: {
     path: dist_dir,
     filename: 'review.bundle.js',
-  }
+  },
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
 };

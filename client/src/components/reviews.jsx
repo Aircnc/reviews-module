@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDom from 'react-dom';
 
 class Reviews extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       satisfied: 'I love this product!!',
@@ -15,7 +15,7 @@ class Reviews extends React.Component {
     return (
       <div>
         <div>
-        <span class="FiveStar__FiveStarTop-hLclkH cJfAex" width="NaN"><span class="FiveStar__SingleStar-Vpwis bUXsVT">★</span><span class="FiveStar__SingleStar-Vpwis bUXsVT">★</span><span class="FiveStar__SingleStar-Vpwis bUXsVT">★</span><span class="FiveStar__SingleStar-Vpwis bUXsVT">★</span><span class="FiveStar__SingleStar-Vpwis bUXsVT">★</span></span>
+        <span className="FiveStar__FiveStarTop-hLclkH cJfAex" width="NaN"><span className="FiveStar__SingleStar-Vpwis bUXsVT">★</span><span class="FiveStar__SingleStar-Vpwis bUXsVT">★</span><span class="FiveStar__SingleStar-Vpwis bUXsVT">★</span><span class="FiveStar__SingleStar-Vpwis bUXsVT">★</span><span class="FiveStar__SingleStar-Vpwis bUXsVT">★</span></span>
           <h3><strong>JenSpring50214</strong> "{this.state.satisfied}"</h3>
           <p>
             My new camera is awesome! I just went on a trip to the Bahamas and I got so many amazing photos due to the zero vibration calibration system! WOW so easy to use, just point and click! I feel like I could be the next Ansel Adams with how nice the photos come out.

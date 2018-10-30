@@ -1,10 +1,11 @@
-
 const Sequelize = require('sequelize');
 
 const sequelize = new Sequelize('reviews_module', 'root', '', {
   host: 'localhost',
   dialect: 'mysql',
-  operatorsAliases: false
+  operatorsAliases: false,
 });
 
-module.exports = sequelize;
+// console.log('--------', sequelize);
+
+module.exports.sequelize = sequelize;
