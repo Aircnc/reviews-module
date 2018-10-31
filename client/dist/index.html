@@ -1,22 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./style.css">
-    <title>Hopping Couch</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <title>Reviews</title>
 </head>
 <body>
-    <div class="grid-container">
-        <div class="navbar" id="nav">Nav Bar</div>
-        <div class="images" id="luan">Images - Luan Part</div>
-    </div>
-    <div class="content-container">
-        <div class="desc" id="blake">Description - Blake Part</div>
-        <div class="booking" id="alice1">Booking - Alice Part</div>
-        <div class="availability" id="alice2">Availability - Alice Part</div>
-        <div class="reviews" id="wilson">Reviews - Wilson Part</div>
-    </div>
+  <h2> AirCnC </h2>
+  <div id="reviews"></div>
+  <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="review.bundle.js"></script>
+  <script> ReactDOM.render(React.createElement(Reviews), document.getElementById('reviews'));</script>
 </body>
 </html>
