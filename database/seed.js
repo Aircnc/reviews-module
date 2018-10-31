@@ -2,6 +2,8 @@ const data = require('./fakedata.js');
 const db = require('./index.js');
 const model = require('./database.js');
 
+// must create database before seeding. query (create database reviews_module)
+
 model.Listings.sync()
   .then(() => model.Reviews.sync())
   .then(() => model.Listings.bulkCreate(data.generatorList(100)))

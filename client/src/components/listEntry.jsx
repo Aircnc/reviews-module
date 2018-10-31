@@ -1,15 +1,26 @@
+import React from 'react';
 
 
-const ListEntry = (props) => {
-  // console.log(props)
-  return (
-    <div> 
-      <img src={props.review.avatar} alt={props.review.user} className="avatar" /> 
-      <div> {props.review.user} </div>
-      <div> {props.review.date} </div>
-      <div> {props.review.content} </div>
-    </div>
-  )
-};
+class ListEntry extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = ({
+      showMore: false
+    })
+  }
+
+  render() {
+    return (
+      <div> 
+        <img src={this.props.review.avatar} alt={this.props.review.user} className="avatar" /> 
+        <div> {this.props.review.user} </div>
+        <div> {this.props.review.date} </div>
+        <div> {this.props.review.content} </div>
+      </div>
+    ); 
+  }
+}
+
 
 export default ListEntry;

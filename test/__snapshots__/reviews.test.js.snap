@@ -1,0 +1,1679 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Reviews /> should render correctly with no props 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Reviews />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div>
+          <span
+            className="FiveStar__FiveStarTop-hLclkH cJfAex"
+            width="NaN"
+          >
+            <span
+              className="FiveStar__SingleStar-Vpwis bUXsVT"
+            >
+              ★
+            </span>
+            <span
+              className="FiveStar__SingleStar-Vpwis bUXsVT"
+            >
+              ★
+            </span>
+            <span
+              className="FiveStar__SingleStar-Vpwis bUXsVT"
+            >
+              ★
+            </span>
+            <span
+              className="FiveStar__SingleStar-Vpwis bUXsVT"
+            >
+              ★
+            </span>
+            <span
+              className="FiveStar__SingleStar-Vpwis bUXsVT"
+            >
+              ★
+            </span>
+          </span>
+          <div
+            className="star-ratings-css"
+          >
+            <div
+              className="star-ratings-css-top"
+              style={
+                Object {
+                  "width": "15%",
+                }
+              }
+            >
+              <span
+                className="star-spacing"
+              >
+                ★
+              </span>
+              <span
+                className="star-spacing"
+              >
+                ★
+              </span>
+              <span
+                className="star-spacing"
+              >
+                ★
+              </span>
+              <span
+                className="star-spacing"
+              >
+                ★
+              </span>
+              <span
+                className="star-spacing"
+              >
+                ★
+              </span>
+            </div>
+            <div
+              className="star-ratings-css-bottom"
+            >
+              <span
+                className="star-spacing"
+              >
+                ★
+              </span>
+              <span
+                className="star-spacing"
+              >
+                ★
+              </span>
+              <span
+                className="star-spacing"
+              >
+                ★
+              </span>
+              <span
+                className="star-spacing"
+              >
+                ★
+              </span>
+              <span
+                className="star-spacing"
+              >
+                ★
+              </span>
+            </div>
+          </div>
+          <div>
+             REVIEWS
+            <List
+              review_data={Array []}
+            />
+          </div>
+          <h3>
+            <strong>
+              JenSpring50214
+            </strong>
+             "
+            I love this product!!
+            "
+          </h3>
+          <p>
+            My new camera is awesome!
+          </p>
+          <span>
+            Verified Buyer 2010
+          </span>
+        </div>,
+        <div>
+          <h3>
+            <strong>
+              SpaceCadetHero421
+            </strong>
+             "
+            Arrived late and damaged :(
+            "
+          </h3>
+          <p>
+            I bought this item from yourphotogrpahywarehouse hoping to replace my old starter DSLR.
+          </p>
+          <span>
+            Verified Buyer 2011
+          </span>
+        </div>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <span
+              className="FiveStar__FiveStarTop-hLclkH cJfAex"
+              width="NaN"
+            >
+              <span
+                className="FiveStar__SingleStar-Vpwis bUXsVT"
+              >
+                ★
+              </span>
+              <span
+                className="FiveStar__SingleStar-Vpwis bUXsVT"
+              >
+                ★
+              </span>
+              <span
+                className="FiveStar__SingleStar-Vpwis bUXsVT"
+              >
+                ★
+              </span>
+              <span
+                className="FiveStar__SingleStar-Vpwis bUXsVT"
+              >
+                ★
+              </span>
+              <span
+                className="FiveStar__SingleStar-Vpwis bUXsVT"
+              >
+                ★
+              </span>
+            </span>,
+            <div
+              className="star-ratings-css"
+            >
+              <div
+                className="star-ratings-css-top"
+                style={
+                  Object {
+                    "width": "15%",
+                  }
+                }
+              >
+                <span
+                  className="star-spacing"
+                >
+                  ★
+                </span>
+                <span
+                  className="star-spacing"
+                >
+                  ★
+                </span>
+                <span
+                  className="star-spacing"
+                >
+                  ★
+                </span>
+                <span
+                  className="star-spacing"
+                >
+                  ★
+                </span>
+                <span
+                  className="star-spacing"
+                >
+                  ★
+                </span>
+              </div>
+              <div
+                className="star-ratings-css-bottom"
+              >
+                <span
+                  className="star-spacing"
+                >
+                  ★
+                </span>
+                <span
+                  className="star-spacing"
+                >
+                  ★
+                </span>
+                <span
+                  className="star-spacing"
+                >
+                  ★
+                </span>
+                <span
+                  className="star-spacing"
+                >
+                  ★
+                </span>
+                <span
+                  className="star-spacing"
+                >
+                  ★
+                </span>
+              </div>
+            </div>,
+            <div>
+               REVIEWS
+              <List
+                review_data={Array []}
+              />
+            </div>,
+            <h3>
+              <strong>
+                JenSpring50214
+              </strong>
+               "
+              I love this product!!
+              "
+            </h3>,
+            <p>
+              My new camera is awesome!
+            </p>,
+            <span>
+              Verified Buyer 2010
+            </span>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <span
+                  className="FiveStar__SingleStar-Vpwis bUXsVT"
+                >
+                  ★
+                </span>,
+                <span
+                  className="FiveStar__SingleStar-Vpwis bUXsVT"
+                >
+                  ★
+                </span>,
+                <span
+                  className="FiveStar__SingleStar-Vpwis bUXsVT"
+                >
+                  ★
+                </span>,
+                <span
+                  className="FiveStar__SingleStar-Vpwis bUXsVT"
+                >
+                  ★
+                </span>,
+                <span
+                  className="FiveStar__SingleStar-Vpwis bUXsVT"
+                >
+                  ★
+                </span>,
+              ],
+              "className": "FiveStar__FiveStarTop-hLclkH cJfAex",
+              "width": "NaN",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "★",
+                  "className": "FiveStar__SingleStar-Vpwis bUXsVT",
+                },
+                "ref": null,
+                "rendered": "★",
+                "type": "span",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "★",
+                  "className": "FiveStar__SingleStar-Vpwis bUXsVT",
+                },
+                "ref": null,
+                "rendered": "★",
+                "type": "span",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "★",
+                  "className": "FiveStar__SingleStar-Vpwis bUXsVT",
+                },
+                "ref": null,
+                "rendered": "★",
+                "type": "span",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "★",
+                  "className": "FiveStar__SingleStar-Vpwis bUXsVT",
+                },
+                "ref": null,
+                "rendered": "★",
+                "type": "span",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "★",
+                  "className": "FiveStar__SingleStar-Vpwis bUXsVT",
+                },
+                "ref": null,
+                "rendered": "★",
+                "type": "span",
+              },
+            ],
+            "type": "span",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="star-ratings-css-top"
+                  style={
+                    Object {
+                      "width": "15%",
+                    }
+                  }
+                >
+                  <span
+                    className="star-spacing"
+                  >
+                    ★
+                  </span>
+                  <span
+                    className="star-spacing"
+                  >
+                    ★
+                  </span>
+                  <span
+                    className="star-spacing"
+                  >
+                    ★
+                  </span>
+                  <span
+                    className="star-spacing"
+                  >
+                    ★
+                  </span>
+                  <span
+                    className="star-spacing"
+                  >
+                    ★
+                  </span>
+                </div>,
+                <div
+                  className="star-ratings-css-bottom"
+                >
+                  <span
+                    className="star-spacing"
+                  >
+                    ★
+                  </span>
+                  <span
+                    className="star-spacing"
+                  >
+                    ★
+                  </span>
+                  <span
+                    className="star-spacing"
+                  >
+                    ★
+                  </span>
+                  <span
+                    className="star-spacing"
+                  >
+                    ★
+                  </span>
+                  <span
+                    className="star-spacing"
+                  >
+                    ★
+                  </span>
+                </div>,
+              ],
+              "className": "star-ratings-css",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <span
+                      className="star-spacing"
+                    >
+                      ★
+                    </span>,
+                    <span
+                      className="star-spacing"
+                    >
+                      ★
+                    </span>,
+                    <span
+                      className="star-spacing"
+                    >
+                      ★
+                    </span>,
+                    <span
+                      className="star-spacing"
+                    >
+                      ★
+                    </span>,
+                    <span
+                      className="star-spacing"
+                    >
+                      ★
+                    </span>,
+                  ],
+                  "className": "star-ratings-css-top",
+                  "style": Object {
+                    "width": "15%",
+                  },
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "★",
+                      "className": "star-spacing",
+                    },
+                    "ref": null,
+                    "rendered": "★",
+                    "type": "span",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "★",
+                      "className": "star-spacing",
+                    },
+                    "ref": null,
+                    "rendered": "★",
+                    "type": "span",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "★",
+                      "className": "star-spacing",
+                    },
+                    "ref": null,
+                    "rendered": "★",
+                    "type": "span",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "★",
+                      "className": "star-spacing",
+                    },
+                    "ref": null,
+                    "rendered": "★",
+                    "type": "span",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "★",
+                      "className": "star-spacing",
+                    },
+                    "ref": null,
+                    "rendered": "★",
+                    "type": "span",
+                  },
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <span
+                      className="star-spacing"
+                    >
+                      ★
+                    </span>,
+                    <span
+                      className="star-spacing"
+                    >
+                      ★
+                    </span>,
+                    <span
+                      className="star-spacing"
+                    >
+                      ★
+                    </span>,
+                    <span
+                      className="star-spacing"
+                    >
+                      ★
+                    </span>,
+                    <span
+                      className="star-spacing"
+                    >
+                      ★
+                    </span>,
+                  ],
+                  "className": "star-ratings-css-bottom",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "★",
+                      "className": "star-spacing",
+                    },
+                    "ref": null,
+                    "rendered": "★",
+                    "type": "span",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "★",
+                      "className": "star-spacing",
+                    },
+                    "ref": null,
+                    "rendered": "★",
+                    "type": "span",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "★",
+                      "className": "star-spacing",
+                    },
+                    "ref": null,
+                    "rendered": "★",
+                    "type": "span",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "★",
+                      "className": "star-spacing",
+                    },
+                    "ref": null,
+                    "rendered": "★",
+                    "type": "span",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "★",
+                      "className": "star-spacing",
+                    },
+                    "ref": null,
+                    "rendered": "★",
+                    "type": "span",
+                  },
+                ],
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                " REVIEWS",
+                <List
+                  review_data={Array []}
+                />,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              " REVIEWS",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "review_data": Array [],
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <strong>
+                  JenSpring50214
+                </strong>,
+                " \\"",
+                "I love this product!!",
+                "\\"",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "JenSpring50214",
+                },
+                "ref": null,
+                "rendered": "JenSpring50214",
+                "type": "strong",
+              },
+              " \\"",
+              "I love this product!!",
+              "\\"",
+            ],
+            "type": "h3",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "My new camera is awesome!",
+            },
+            "ref": null,
+            "rendered": "My new camera is awesome!",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Verified Buyer 2010",
+            },
+            "ref": null,
+            "rendered": "Verified Buyer 2010",
+            "type": "span",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h3>
+              <strong>
+                SpaceCadetHero421
+              </strong>
+               "
+              Arrived late and damaged :(
+              "
+            </h3>,
+            <p>
+              I bought this item from yourphotogrpahywarehouse hoping to replace my old starter DSLR.
+            </p>,
+            <span>
+              Verified Buyer 2011
+            </span>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <strong>
+                  SpaceCadetHero421
+                </strong>,
+                " \\"",
+                "Arrived late and damaged :(",
+                "\\"",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "SpaceCadetHero421",
+                },
+                "ref": null,
+                "rendered": "SpaceCadetHero421",
+                "type": "strong",
+              },
+              " \\"",
+              "Arrived late and damaged :(",
+              "\\"",
+            ],
+            "type": "h3",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "I bought this item from yourphotogrpahywarehouse hoping to replace my old starter DSLR.",
+            },
+            "ref": null,
+            "rendered": "I bought this item from yourphotogrpahywarehouse hoping to replace my old starter DSLR.",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Verified Buyer 2011",
+            },
+            "ref": null,
+            "rendered": "Verified Buyer 2011",
+            "type": "span",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div>
+            <span
+              className="FiveStar__FiveStarTop-hLclkH cJfAex"
+              width="NaN"
+            >
+              <span
+                className="FiveStar__SingleStar-Vpwis bUXsVT"
+              >
+                ★
+              </span>
+              <span
+                className="FiveStar__SingleStar-Vpwis bUXsVT"
+              >
+                ★
+              </span>
+              <span
+                className="FiveStar__SingleStar-Vpwis bUXsVT"
+              >
+                ★
+              </span>
+              <span
+                className="FiveStar__SingleStar-Vpwis bUXsVT"
+              >
+                ★
+              </span>
+              <span
+                className="FiveStar__SingleStar-Vpwis bUXsVT"
+              >
+                ★
+              </span>
+            </span>
+            <div
+              className="star-ratings-css"
+            >
+              <div
+                className="star-ratings-css-top"
+                style={
+                  Object {
+                    "width": "15%",
+                  }
+                }
+              >
+                <span
+                  className="star-spacing"
+                >
+                  ★
+                </span>
+                <span
+                  className="star-spacing"
+                >
+                  ★
+                </span>
+                <span
+                  className="star-spacing"
+                >
+                  ★
+                </span>
+                <span
+                  className="star-spacing"
+                >
+                  ★
+                </span>
+                <span
+                  className="star-spacing"
+                >
+                  ★
+                </span>
+              </div>
+              <div
+                className="star-ratings-css-bottom"
+              >
+                <span
+                  className="star-spacing"
+                >
+                  ★
+                </span>
+                <span
+                  className="star-spacing"
+                >
+                  ★
+                </span>
+                <span
+                  className="star-spacing"
+                >
+                  ★
+                </span>
+                <span
+                  className="star-spacing"
+                >
+                  ★
+                </span>
+                <span
+                  className="star-spacing"
+                >
+                  ★
+                </span>
+              </div>
+            </div>
+            <div>
+               REVIEWS
+              <List
+                review_data={Array []}
+              />
+            </div>
+            <h3>
+              <strong>
+                JenSpring50214
+              </strong>
+               "
+              I love this product!!
+              "
+            </h3>
+            <p>
+              My new camera is awesome!
+            </p>
+            <span>
+              Verified Buyer 2010
+            </span>
+          </div>,
+          <div>
+            <h3>
+              <strong>
+                SpaceCadetHero421
+              </strong>
+               "
+              Arrived late and damaged :(
+              "
+            </h3>
+            <p>
+              I bought this item from yourphotogrpahywarehouse hoping to replace my old starter DSLR.
+            </p>
+            <span>
+              Verified Buyer 2011
+            </span>
+          </div>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <span
+                className="FiveStar__FiveStarTop-hLclkH cJfAex"
+                width="NaN"
+              >
+                <span
+                  className="FiveStar__SingleStar-Vpwis bUXsVT"
+                >
+                  ★
+                </span>
+                <span
+                  className="FiveStar__SingleStar-Vpwis bUXsVT"
+                >
+                  ★
+                </span>
+                <span
+                  className="FiveStar__SingleStar-Vpwis bUXsVT"
+                >
+                  ★
+                </span>
+                <span
+                  className="FiveStar__SingleStar-Vpwis bUXsVT"
+                >
+                  ★
+                </span>
+                <span
+                  className="FiveStar__SingleStar-Vpwis bUXsVT"
+                >
+                  ★
+                </span>
+              </span>,
+              <div
+                className="star-ratings-css"
+              >
+                <div
+                  className="star-ratings-css-top"
+                  style={
+                    Object {
+                      "width": "15%",
+                    }
+                  }
+                >
+                  <span
+                    className="star-spacing"
+                  >
+                    ★
+                  </span>
+                  <span
+                    className="star-spacing"
+                  >
+                    ★
+                  </span>
+                  <span
+                    className="star-spacing"
+                  >
+                    ★
+                  </span>
+                  <span
+                    className="star-spacing"
+                  >
+                    ★
+                  </span>
+                  <span
+                    className="star-spacing"
+                  >
+                    ★
+                  </span>
+                </div>
+                <div
+                  className="star-ratings-css-bottom"
+                >
+                  <span
+                    className="star-spacing"
+                  >
+                    ★
+                  </span>
+                  <span
+                    className="star-spacing"
+                  >
+                    ★
+                  </span>
+                  <span
+                    className="star-spacing"
+                  >
+                    ★
+                  </span>
+                  <span
+                    className="star-spacing"
+                  >
+                    ★
+                  </span>
+                  <span
+                    className="star-spacing"
+                  >
+                    ★
+                  </span>
+                </div>
+              </div>,
+              <div>
+                 REVIEWS
+                <List
+                  review_data={Array []}
+                />
+              </div>,
+              <h3>
+                <strong>
+                  JenSpring50214
+                </strong>
+                 "
+                I love this product!!
+                "
+              </h3>,
+              <p>
+                My new camera is awesome!
+              </p>,
+              <span>
+                Verified Buyer 2010
+              </span>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <span
+                    className="FiveStar__SingleStar-Vpwis bUXsVT"
+                  >
+                    ★
+                  </span>,
+                  <span
+                    className="FiveStar__SingleStar-Vpwis bUXsVT"
+                  >
+                    ★
+                  </span>,
+                  <span
+                    className="FiveStar__SingleStar-Vpwis bUXsVT"
+                  >
+                    ★
+                  </span>,
+                  <span
+                    className="FiveStar__SingleStar-Vpwis bUXsVT"
+                  >
+                    ★
+                  </span>,
+                  <span
+                    className="FiveStar__SingleStar-Vpwis bUXsVT"
+                  >
+                    ★
+                  </span>,
+                ],
+                "className": "FiveStar__FiveStarTop-hLclkH cJfAex",
+                "width": "NaN",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "★",
+                    "className": "FiveStar__SingleStar-Vpwis bUXsVT",
+                  },
+                  "ref": null,
+                  "rendered": "★",
+                  "type": "span",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "★",
+                    "className": "FiveStar__SingleStar-Vpwis bUXsVT",
+                  },
+                  "ref": null,
+                  "rendered": "★",
+                  "type": "span",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "★",
+                    "className": "FiveStar__SingleStar-Vpwis bUXsVT",
+                  },
+                  "ref": null,
+                  "rendered": "★",
+                  "type": "span",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "★",
+                    "className": "FiveStar__SingleStar-Vpwis bUXsVT",
+                  },
+                  "ref": null,
+                  "rendered": "★",
+                  "type": "span",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "★",
+                    "className": "FiveStar__SingleStar-Vpwis bUXsVT",
+                  },
+                  "ref": null,
+                  "rendered": "★",
+                  "type": "span",
+                },
+              ],
+              "type": "span",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="star-ratings-css-top"
+                    style={
+                      Object {
+                        "width": "15%",
+                      }
+                    }
+                  >
+                    <span
+                      className="star-spacing"
+                    >
+                      ★
+                    </span>
+                    <span
+                      className="star-spacing"
+                    >
+                      ★
+                    </span>
+                    <span
+                      className="star-spacing"
+                    >
+                      ★
+                    </span>
+                    <span
+                      className="star-spacing"
+                    >
+                      ★
+                    </span>
+                    <span
+                      className="star-spacing"
+                    >
+                      ★
+                    </span>
+                  </div>,
+                  <div
+                    className="star-ratings-css-bottom"
+                  >
+                    <span
+                      className="star-spacing"
+                    >
+                      ★
+                    </span>
+                    <span
+                      className="star-spacing"
+                    >
+                      ★
+                    </span>
+                    <span
+                      className="star-spacing"
+                    >
+                      ★
+                    </span>
+                    <span
+                      className="star-spacing"
+                    >
+                      ★
+                    </span>
+                    <span
+                      className="star-spacing"
+                    >
+                      ★
+                    </span>
+                  </div>,
+                ],
+                "className": "star-ratings-css",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <span
+                        className="star-spacing"
+                      >
+                        ★
+                      </span>,
+                      <span
+                        className="star-spacing"
+                      >
+                        ★
+                      </span>,
+                      <span
+                        className="star-spacing"
+                      >
+                        ★
+                      </span>,
+                      <span
+                        className="star-spacing"
+                      >
+                        ★
+                      </span>,
+                      <span
+                        className="star-spacing"
+                      >
+                        ★
+                      </span>,
+                    ],
+                    "className": "star-ratings-css-top",
+                    "style": Object {
+                      "width": "15%",
+                    },
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "★",
+                        "className": "star-spacing",
+                      },
+                      "ref": null,
+                      "rendered": "★",
+                      "type": "span",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "★",
+                        "className": "star-spacing",
+                      },
+                      "ref": null,
+                      "rendered": "★",
+                      "type": "span",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "★",
+                        "className": "star-spacing",
+                      },
+                      "ref": null,
+                      "rendered": "★",
+                      "type": "span",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "★",
+                        "className": "star-spacing",
+                      },
+                      "ref": null,
+                      "rendered": "★",
+                      "type": "span",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "★",
+                        "className": "star-spacing",
+                      },
+                      "ref": null,
+                      "rendered": "★",
+                      "type": "span",
+                    },
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <span
+                        className="star-spacing"
+                      >
+                        ★
+                      </span>,
+                      <span
+                        className="star-spacing"
+                      >
+                        ★
+                      </span>,
+                      <span
+                        className="star-spacing"
+                      >
+                        ★
+                      </span>,
+                      <span
+                        className="star-spacing"
+                      >
+                        ★
+                      </span>,
+                      <span
+                        className="star-spacing"
+                      >
+                        ★
+                      </span>,
+                    ],
+                    "className": "star-ratings-css-bottom",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "★",
+                        "className": "star-spacing",
+                      },
+                      "ref": null,
+                      "rendered": "★",
+                      "type": "span",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "★",
+                        "className": "star-spacing",
+                      },
+                      "ref": null,
+                      "rendered": "★",
+                      "type": "span",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "★",
+                        "className": "star-spacing",
+                      },
+                      "ref": null,
+                      "rendered": "★",
+                      "type": "span",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "★",
+                        "className": "star-spacing",
+                      },
+                      "ref": null,
+                      "rendered": "★",
+                      "type": "span",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "★",
+                        "className": "star-spacing",
+                      },
+                      "ref": null,
+                      "rendered": "★",
+                      "type": "span",
+                    },
+                  ],
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  " REVIEWS",
+                  <List
+                    review_data={Array []}
+                  />,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                " REVIEWS",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "review_data": Array [],
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <strong>
+                    JenSpring50214
+                  </strong>,
+                  " \\"",
+                  "I love this product!!",
+                  "\\"",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "JenSpring50214",
+                  },
+                  "ref": null,
+                  "rendered": "JenSpring50214",
+                  "type": "strong",
+                },
+                " \\"",
+                "I love this product!!",
+                "\\"",
+              ],
+              "type": "h3",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "My new camera is awesome!",
+              },
+              "ref": null,
+              "rendered": "My new camera is awesome!",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Verified Buyer 2010",
+              },
+              "ref": null,
+              "rendered": "Verified Buyer 2010",
+              "type": "span",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h3>
+                <strong>
+                  SpaceCadetHero421
+                </strong>
+                 "
+                Arrived late and damaged :(
+                "
+              </h3>,
+              <p>
+                I bought this item from yourphotogrpahywarehouse hoping to replace my old starter DSLR.
+              </p>,
+              <span>
+                Verified Buyer 2011
+              </span>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <strong>
+                    SpaceCadetHero421
+                  </strong>,
+                  " \\"",
+                  "Arrived late and damaged :(",
+                  "\\"",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "SpaceCadetHero421",
+                  },
+                  "ref": null,
+                  "rendered": "SpaceCadetHero421",
+                  "type": "strong",
+                },
+                " \\"",
+                "Arrived late and damaged :(",
+                "\\"",
+              ],
+              "type": "h3",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "I bought this item from yourphotogrpahywarehouse hoping to replace my old starter DSLR.",
+              },
+              "ref": null,
+              "rendered": "I bought this item from yourphotogrpahywarehouse hoping to replace my old starter DSLR.",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Verified Buyer 2011",
+              },
+              "ref": null,
+              "rendered": "Verified Buyer 2011",
+              "type": "span",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
