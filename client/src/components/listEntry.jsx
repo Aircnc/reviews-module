@@ -17,6 +17,8 @@ class ListEntry extends React.Component {
         <div> {this.props.review.user} </div>
         <div> {this.props.review.date} </div>
         <div> {this.props.review.content} </div>
+        
+        <button type="button" className="_1k01n3v1" aria-busy="false"> Read more </button>
       </div>
     ); 
   }

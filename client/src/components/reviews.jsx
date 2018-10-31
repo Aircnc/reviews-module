@@ -2,6 +2,7 @@
 import React from 'react';
 import axios from 'axios';
 import List from './list.jsx';
+import Stars from './stars.jsx';
 
 
 class Reviews extends React.Component {
@@ -74,7 +75,9 @@ class Reviews extends React.Component {
 
           <input type="text" className="_x49i5cv" id="p3-ReviewsSearchBox" name="p3-ReviewsSearchBox" placeholder="Search reviews" value=""/>
         
+        <br/><br/> 
         
+        <Stars list_data={this.state.list_data} />
 
         <br/><br/>  
           REVIEWS
