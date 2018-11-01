@@ -1,5 +1,6 @@
 import React from 'react';
 import ListEntry from './listEntry.jsx';
+import styled from 'styled-components';
 
 
 const List = (props) => {
@@ -8,11 +9,11 @@ const List = (props) => {
     <div>
       {props.review_data.map((review, i) => {
         return (
-          <ListEntry review={review} key={i}/>
-        )
+          <ListEntry review={review} key={i} />
+        );
       })}
     </div>
-  )
+  );
 };
 
 export default List;

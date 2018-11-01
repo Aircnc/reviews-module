@@ -54,6 +54,9 @@ const findReviews = (id, callback) => {
     where: {
       ListingId: id,
     },
+    order: [
+      ['date', 'DESC'],
+    ],
   })
     .then((results) => { callback(null, results); })
     .catch((error) => { callback(error, null); });

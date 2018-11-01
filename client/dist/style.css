@@ -1,7 +1,3 @@
-/*remove this*/
-body {
-  padding: 2rem;
-}
 
 .navbar { grid-area: navbar; }
 .images {grid-area: image;}
@@ -53,6 +49,13 @@ body {
     font-size: 30px;
 }
 
+
+
+/*remove this*/
+body {
+  padding: 2rem;
+}
+
 /*font*/
 .font {
   font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -70,7 +73,6 @@ body {
   width: auto;
   height: 18px;
   padding: 7px;
-  /*margin: 5px 0 15px 0;*/
 }
 
 /*flex total review*/
@@ -96,35 +98,45 @@ body {
 
 .left-stars {
   width: 50%;
-  margin-right: 16px;
+  margin-right: 20px;
 }
 
 .right-stars {
   width: 50%;
-  margin-left: 16px;
+  margin-left: 20px;
 }
 
 .lone-star-rate {
   display: flex;
-  /*flex-direction: row;*/
   justify-content: space-between;
   margin-bottom: 12px;
 }
 
-.lone-names, .lone-stars {
-  width: 50%;
+.lone-names {
+  margin: auto 0;
+}
+
+.lone-stars {
+  margin: auto 0;
 }
 
 /*flex reviews users*/
 .review-users {
   display: flex;
-  /*flex-direction: row;*/
   flex-wrap: nowrap;
   justify-content: flex-start;
   padding: 1rem 0;
 }
 
-.review-avatar, .review-name {
+.review-avatar {
+  margin-right: 10px;
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.review-name {
   margin-right: 10px;
 }
 
@@ -133,13 +145,15 @@ body {
 }
 
 /* line */
-.reviewParentLine {
+/*.reviewParentLine {
    margin-top: 20px;
    margin-bottom: 20px;
-}
+}*/
 
 .reviewLine {
-   border-bottom: 1px solid var(--color-divider, #EBEBEB) !important;
+  border-bottom: 1px solid var(--color-divider, #EBEBEB) !important;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .flag {
@@ -149,28 +163,26 @@ body {
 }
 
  /*avatars*/
-.avatar {
+/*.avatar {
   vertical-align: middle;
   width: 50px;
   height: 50px;
   border-radius: 50%;
-}
+}*/
 
 
-/* Total Stars */
+/* Total Stars Category */
 .total-star-ratings-css {
   unicode-bidi: bidi-override;
   color: rgb(216, 216, 216);
   font-size: 23px;
   width: 123px;
   position: relative;
-
   padding: 0;
   text-shadow: 0px 0.5px 0 #a2a2a2;
 }
 
 .total-star-ratings-css-top {
-  /*color: #e7711b;*/
   color: rgb(0, 132, 137);
   padding: 0;
   position: absolute;
@@ -192,7 +204,7 @@ body {
 }
 
 
- /* Stars Single Category */
+ /* Single Stars Category */
 .star-ratings-css {
   unicode-bidi: bidi-override;
   color: rgb(216, 216, 216);
@@ -204,7 +216,6 @@ body {
 }
 
 .star-ratings-css-top {
-  /*color: #e7711b;*/
   color: rgb(0, 132, 137);
   padding: 0;
   position: absolute;

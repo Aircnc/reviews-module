@@ -12,52 +12,62 @@ class Reviews extends React.Component {
     this.state = {
       list_data: [],
       review_data: [],
-      query: ''
+      filter_data: [],
+      query: '',
     };
-    this.handleChange = this.handleChange.bind(this)
-    this.searchContent = this.searchContent.bind(this)
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSearch = this.handleSearch.bind(this);
   }
 
   componentDidMount() {
-    const id = window.location.href.slice(31, -1)
+    const id = window.location.href.slice(31, -1);
     // console.log(id)
 
     axios.get(`/listings/${id}/reviews`)
       .then((response) => {
         // console.log(response)
         this.setState({
-          review_data: response.data
+          review_data: response.data,
+          filter_data: response.data,
         });
       })
-      .catch((error) => console.log(error))
+      .catch((error) => console.log(error));
 
     axios.get(`/listings/${id}/listings`)
       .then((response) => {
         // console.log(response)
         this.setState({
-          list_data: response.data
+          list_data: response.data,
         });
       })
-      .catch((error) => console.log(error))
+      .catch((error) => console.log(error));
   }
 
   handleChange(event) {
     this.setState({
-      query: event.target.value
+      query: event.target.value,
     })
   }
 
-  searchContent() {
-    const array = this.state.review_data;
-    return array.filter(review =>
-      Object.keys(review).some(content => review[content].toLowerCase().includes(query.toLowerCase())));
+  handleSearch(e) {
+    if (e.key === 'Enter') {
+      const array = this.state.review_data;
+      const query = this.state.query;
+      // console.log(array);
+      const filterReviews = array.filter(review =>
+        review.content.toLowerCase().includes(query.toLowerCase()));
+      // console.log(filterReviews);
+      this.setState({
+        filter_data: filterReviews,
+      });
+    }
+// Object.keys(review).some(content => review[content].toLowerCase().includes(query.toLowerCase())));
   }
-  
 
 
   render() {
     // console.log(this.state.list_data)
-    console.log(this.state.query)
+    // console.log(this.state.query)
     const arr = [ this.state.list_data.accuracy,
                   this.state.list_data.communication,
                   this.state.list_data.clean,
@@ -76,19 +86,27 @@ class Reviews extends React.Component {
           <div className="reviewParentLine">
             <div className="reviewLine"></div>
           </div>
-          <div className="total-review-bar">    
-            <h3 className="total-review total-col-name font"><strong> {this.state.review_data.length} Reviews </strong></h3> 
+          <div className="total-review-bar">   
+            <h3 className="total-review total-col-name font"><strong> {this.state.review_data.length} Reviews </strong></h3>
             <div className="total-star-ratings-css total-col-star">
               <div className="total-star-ratings-css-top" style={{width: `${starTotalPercent}%`}}>
-                <span className="total-star-spacing">★</span><span className="total-star-spacing">★</span><span className="total-star-spacing">★</span><span className="total-star-spacing">★</span><span className="total-star-spacing">★</span>
+                <span className="total-star-spacing">★</span>
+                <span className="total-star-spacing">★</span>
+                <span className="total-star-spacing">★</span>
+                <span className="total-star-spacing">★</span>
+                <span className="total-star-spacing">★</span>
               </div>
               <div className="total-star-ratings-css-bottom">
-                <span className="total-star-spacing">★</span><span className="total-star-spacing">★</span><span className="total-star-spacing">★</span><span className="total-star-spacing">★</span><span className="total-star-spacing">★</span>
+                <span className="total-star-spacing">★</span>
+                <span className="total-star-spacing">★</span>
+                <span className="total-star-spacing">★</span>
+                <span className="total-star-spacing">★</span>
+                <span className="total-star-spacing">★</span>
               </div>
             </div>
                       
             <br/>
-            <input type="text" className="search total-col-search" id="ReviewsSearchBox" name="ReviewsSearchBox" placeholder="Search reviews" value={this.state.query} onChange={this.handleChange} onSubmit={() => this.searchContent}/>
+            <input type="text" className="search total-col-search" id="ReviewsSearchBox" name="ReviewsSearchBox" placeholder="Search reviews" value={this.state.query} onChange={this.handleChange}  onKeyPress={ (e) => this.handleSearch(e) } />
           </div>
         
           <div className="reviewParentLine">
@@ -102,7 +120,7 @@ class Reviews extends React.Component {
           REVIEWS
           <br/><br/>
           <div> 
-            <List className="user-review-bar font" review_data={this.state.review_data} />
+            <List className="user-review-bar font" review_data={this.state.filter_data} />
           </div> 
 
         </div>
@@ -114,4 +132,3 @@ class Reviews extends React.Component {
 
 export default Reviews;
 
-        
