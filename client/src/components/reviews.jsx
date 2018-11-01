@@ -61,46 +61,37 @@ class Reviews extends React.Component {
     return (
       <div>
         <div>
-
-        <div className="star-ratings-css">
-          <div className="star-ratings-css-top" style={{width: `${starTotalPercent}%`}}>
-            <span className="star-spacing">★</span><span className="star-spacing">★</span><span className="star-spacing">★</span><span className="star-spacing">★</span><span className="star-spacing">★</span>
+          <div className="total-review-bar">    
+            <h3 className="total-review col font"><strong> {this.state.review_data.length} Reviews </strong></h3> 
+            <div className="total-star-ratings-css col">
+              <div className="total-star-ratings-css-top" style={{width: `${starTotalPercent}%`}}>
+                <span className="total-star-spacing">★</span><span className="total-star-spacing">★</span><span className="total-star-spacing">★</span><span className="total-star-spacing">★</span><span className="total-star-spacing">★</span>
+              </div>
+              <div className="total-star-ratings-css-bottom">
+                <span className="total-star-spacing">★</span><span className="total-star-spacing">★</span><span className="total-star-spacing">★</span><span className="total-star-spacing">★</span><span className="total-star-spacing">★</span>
+              </div>
+            </div>
+           <div className="col"></div>           
+            <br/>
+            <input type="text" className="search col" id="ReviewsSearchBox" name="ReviewsSearchBox" placeholder="Search reviews" value=""/>
           </div>
-          <div className="star-ratings-css-bottom">
-            <span className="star-spacing">★</span><span className="star-spacing">★</span><span className="star-spacing">★</span><span className="star-spacing">★</span><span className="star-spacing">★</span>
+        
+          <div className="reviewParentLine">
+            <div className="reviewLine"></div>
           </div>
-        </div>
 
-        <br/>
 
-          <input type="text" className="_x49i5cv" id="p3-ReviewsSearchBox" name="p3-ReviewsSearchBox" placeholder="Search reviews" value=""/>
-        
-        <br/><br/> 
-        
-        <Stars list_data={this.state.list_data} />
+          <br/>
+          <Stars className="star-review-bar font" list_data={this.state.list_data} />
+          <br/><br/>  
 
-        <br/><br/>  
           REVIEWS
-        <br/><br/> 
-        
-        <div> 
-          <List review_data={this.state.review_data} />
-        </div> 
+          <br/><br/>
+          <div> 
+            <List className="user-review-bar font" review_data={this.state.review_data} />
+          </div> 
 
-          <h3><strong>JenSpring50214</strong> "{this.state.satisfied}"</h3>
-          <p>
-            My new camera is awesome! 
-          </p>
-          <span>Verified Buyer 2010</span>
         </div>
-        <div>
-          <h3><strong>SpaceCadetHero421</strong> "{this.state.unhappy}"</h3>
-          <p>
-            I bought this item from yourphotogrpahywarehouse hoping to replace my old starter DSLR. 
-          </p>
-          <span>Verified Buyer 2011</span>
-        </div>
-
       </div>
     );
   }
@@ -112,3 +103,16 @@ export default Reviews;
         // <span className="FiveStar__FiveStarTop-hLclkH cJfAex" width="NaN"><span className="FiveStar__SingleStar-Vpwis bUXsVT">★</span><span className="FiveStar__SingleStar-Vpwis bUXsVT">★</span><span className="FiveStar__SingleStar-Vpwis bUXsVT">★</span><span className="FiveStar__SingleStar-Vpwis bUXsVT">★</span><span className="FiveStar__SingleStar-Vpwis bUXsVT">★</span></span>
 
         // <svg viewBox="0 0 24 24" role="presentation" aria-hidden="true" focusable="false" style="height:1em;width:1em;display:block;fill:currentColor"><path d="m10.4 18.2c-4.2-.6-7.2-4.5-6.6-8.8.6-4.2 4.5-7.2 8.8-6.6 4.2.6 7.2 4.5 6.6 8.8-.6 4.2-4.6 7.2-8.8 6.6m12.6 3.8-5-5c1.4-1.4 2.3-3.1 2.6-5.2.7-5.1-2.8-9.7-7.8-10.5-5-.7-9.7 2.8-10.5 7.9-.7 5.1 2.8 9.7 7.8 10.5 2.5.4 4.9-.3 6.7-1.7v.1l5 5c .3.3.8.3 1.1 0s .4-.8.1-1.1" fill-rule="evenodd"></path></svg>
+        
+          // <h3><strong>JenSpring50214</strong> "{this.state.satisfied}"</h3>
+          // <p>
+          //   My new camera is awesome! 
+          // </p>
+          // <span>Verified Buyer 2010</span>
+        // <div>
+        //   <h3><strong>SpaceCadetHero421</strong> "{this.state.unhappy}"</h3>
+        //   <p>
+        //     I bought this item from yourphotogrpahywarehouse hoping to replace my old starter DSLR. 
+        //   </p>
+        //   <span>Verified Buyer 2011</span>
+        // </div>
