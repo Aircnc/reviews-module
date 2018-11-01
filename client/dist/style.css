@@ -67,22 +67,25 @@ body {
 
 /*search*/
 .search {
-  width: 100%;
+  width: auto;
   height: 18px;
-  /*margin: 5px 0 15px 0;*/
   padding: 7px;
+  /*margin: 5px 0 15px 0;*/
 }
 
 /*flex total review*/
 .total-review-bar {
   display: flex;
-  flex-direction: row;
-
+  justify-content: flex-start;
+  padding-top: 20px;
 }
 
-.col {
-  display: flex;
-  width: 25%;
+.total-col-name {
+  padding-right: 16px;
+}
+
+.total-col-search {
+  margin-left: auto;
 }
 
 /*flex single review*/
@@ -157,9 +160,9 @@ body {
 /* Total Stars */
 .total-star-ratings-css {
   unicode-bidi: bidi-override;
-  color: #c5c5c5;
-  font-size: 20px;
-  width: 120px;
+  color: rgb(216, 216, 216);
+  font-size: 23px;
+  width: 123px;
   position: relative;
 
   padding: 0;
@@ -168,7 +171,7 @@ body {
 
 .total-star-ratings-css-top {
   /*color: #e7711b;*/
-  color: rgb(25, 133, 140);
+  color: rgb(0, 132, 137);
   padding: 0;
   position: absolute;
   z-index: 1;
@@ -185,16 +188,16 @@ body {
 }
 
 .total-star-spacing {
-   margin-right: 5px;
+   margin-right: 2px;
 }
 
 
  /* Stars Single Category */
 .star-ratings-css {
   unicode-bidi: bidi-override;
-  color: #c5c5c5;
-  font-size: 16px;
-  width: 104px;
+  color: rgb(216, 216, 216);
+  font-size: 20px;
+  width: 112px;
   position: relative;
   padding: 0;
   text-shadow: 0px 0.5px 0 #a2a2a2;
@@ -202,7 +205,7 @@ body {
 
 .star-ratings-css-top {
   /*color: #e7711b;*/
-  color: rgb(25, 133, 140);
+  color: rgb(0, 132, 137);
   padding: 0;
   position: absolute;
   z-index: 1;
@@ -219,5 +222,5 @@ body {
 }
 
 .star-spacing {
-   margin-right: 6px;
+   margin-right: 3px;
 }
