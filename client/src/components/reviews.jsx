@@ -3,6 +3,7 @@ import React from 'react';
 import axios from 'axios';
 import List from './list.jsx';
 import Stars from './stars.jsx';
+import styled from 'styled-components';
 
 
 class Reviews extends React.Component {
@@ -46,7 +47,7 @@ class Reviews extends React.Component {
   handleChange(event) {
     this.setState({
       query: event.target.value,
-    })
+    });
   }
 
   handleSearch(e) {
@@ -61,7 +62,6 @@ class Reviews extends React.Component {
         filter_data: filterReviews,
       });
     }
-// Object.keys(review).some(content => review[content].toLowerCase().includes(query.toLowerCase())));
   }
 
 
@@ -83,45 +83,40 @@ class Reviews extends React.Component {
     return (
       <div>
         <div>
-          <div className="reviewParentLine">
-            <div className="reviewLine"></div>
-          </div>
-          <div className="total-review-bar">   
-            <h3 className="total-review total-col-name font"><strong> {this.state.review_data.length} Reviews </strong></h3>
-            <div className="total-star-ratings-css total-col-star">
-              <div className="total-star-ratings-css-top" style={{width: `${starTotalPercent}%`}}>
-                <span className="total-star-spacing">★</span>
-                <span className="total-star-spacing">★</span>
-                <span className="total-star-spacing">★</span>
-                <span className="total-star-spacing">★</span>
-                <span className="total-star-spacing">★</span>
-              </div>
-              <div className="total-star-ratings-css-bottom">
-                <span className="total-star-spacing">★</span>
-                <span className="total-star-spacing">★</span>
-                <span className="total-star-spacing">★</span>
-                <span className="total-star-spacing">★</span>
-                <span className="total-star-spacing">★</span>
-              </div>
-            </div>
-                      
-            <br/>
-            <input type="text" className="search total-col-search" id="ReviewsSearchBox" name="ReviewsSearchBox" placeholder="Search reviews" value={this.state.query} onChange={this.handleChange}  onKeyPress={ (e) => this.handleSearch(e) } />
-          </div>
+          <Line />
+          <ReviewBarTotal>
+            <ReviewNameTotal><strong> {this.state.review_data.length} Reviews </strong></ReviewNameTotal>
+            <StarRateTotal>
+              <StarRateTotalTop style={{ width: `${starTotalPercent}%` }}>
+                <StarSpacingTotal>★</StarSpacingTotal>
+                <StarSpacingTotal>★</StarSpacingTotal>
+                <StarSpacingTotal>★</StarSpacingTotal>
+                <StarSpacingTotal>★</StarSpacingTotal>
+                <StarSpacingTotal>★</StarSpacingTotal>
+              </StarRateTotalTop>
+              <StarRateTotalBottom>
+                <StarSpacingTotal>★</StarSpacingTotal>
+                <StarSpacingTotal>★</StarSpacingTotal>
+                <StarSpacingTotal>★</StarSpacingTotal>
+                <StarSpacingTotal>★</StarSpacingTotal>
+                <StarSpacingTotal>★</StarSpacingTotal>
+              </StarRateTotalBottom>
+            </StarRateTotal>        
+            <br />
+            <Search type="text" placeholder="Search reviews" value={this.state.query} onChange={this.handleChange}  onKeyPress={ (e) => this.handleSearch(e) } />
+          </ReviewBarTotal>
         
-          <div className="reviewParentLine">
-            <div className="reviewLine"></div>
+          <Line />
+
+          <br />
+          <Stars list_data={this.state.list_data} />
+          <br /><br />
+
+          REVIEWS BELOW
+          <br /><br />
+          <div>
+            <List review_data={this.state.filter_data} />
           </div>
-
-          <br/>
-          <Stars className="star-review-bar font" list_data={this.state.list_data} />
-          <br/><br/>  
-
-          REVIEWS
-          <br/><br/>
-          <div> 
-            <List className="user-review-bar font" review_data={this.state.filter_data} />
-          </div> 
 
         </div>
       </div>
@@ -132,3 +127,63 @@ class Reviews extends React.Component {
 
 export default Reviews;
 
+
+// Styled Components
+
+const Line = styled.div`
+  border-bottom: 1px solid var(--color-divider, #EBEBEB) !important;
+  margin-top: 20px;
+  margin-bottom: 20px;
+`;
+
+const StarRateTotal = styled.div`
+  unicode-bidi: bidi-override;
+  color: rgb(216, 216, 216);
+  font-size: 23px;
+  width: 123px;
+  position: relative;
+  padding: 0;
+  text-shadow: 0px 0.5px 0 #a2a2a2;
+`;
+
+const StarRateTotalTop = styled.div`
+  color: rgb(0, 132, 137);
+  padding: 0;
+  position: absolute;
+  z-index: 1;
+  display: block;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+`;
+
+const StarRateTotalBottom = styled.div`
+  padding: 0;
+  display: block;
+  z-index: 0;
+`;
+
+const StarSpacingTotal = styled.span`
+  margin-right: 2px;
+`;
+
+const ReviewBarTotal = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 20px;
+`;
+
+const ReviewNameTotal = styled.h3`
+  font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #484848;
+  font-size: 24px;
+  margin: 0;
+  padding-right: 16px;
+`;
+
+const Search = styled.input`
+  width: auto;
+  height: 18px;
+  padding: 7px;
+  margin-left: auto;
+`;

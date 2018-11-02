@@ -1,0 +1,26 @@
+import React from 'react';
+import { shallow, mount, render } from 'enzyme';
+// import List from '../client/src/components/list.jsx';
+import ListEntry from '../client/src/components/listEntry.jsx';
+
+const review = {
+  "id": 281,
+  "user": "Albertha",
+  "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/andysolomon/128.jpg",
+  "date": "September 2014",
+  "content": "Eos nam perferendis. Eaque qui sint id. Enim et non fugit iusto similique expedita laborum. Omnis neque quisquam at temporibus molestiae optio.",
+  "response": null,
+  "createdAt": "2018-10-30T02:17:01.000Z",
+  "updatedAt": "2018-10-30T02:17:01.000Z",
+  "ListingId": 33
+};
+
+
+describe('Lists components mapping', () => {
+	it('check that there are more than one list entry for reviews', () => {
+		const listEntry = shallow(<ListEntry review={review} key={review.id}/>);
+		expect(listEntry.state('showMore')).toBe(false);
+		listEntry.find('button').simulate('click');
+		expect(listEntry.state('showMore')).toBe(true);
+	});
+})
