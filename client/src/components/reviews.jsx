@@ -3,8 +3,8 @@ import React from 'react';
 import axios from 'axios';
 import List from './list.jsx';
 import Stars from './stars.jsx';
-import styled from 'styled-components';
 import Report from './report.jsx';
+import styled from 'styled-components';
 
 
 class Reviews extends React.Component {
@@ -184,7 +184,6 @@ const ReviewBarTotal = styled.div`
   justify-content: space-between
   padding-top: 20px;
 `;
-  // justify-content: flex-start;
 
 const NameStar = styled.div`
   display: flex;
@@ -215,7 +214,6 @@ const Search = styled.input`
   height: 18px;
   padding: 0 7px;
   margin: auto;
+  border: none;
 `;
 
-  // padding: 7px;
-  // margin-left: auto;
