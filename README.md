@@ -7,7 +7,7 @@ This repository is the reviews module of a cloned airbnb listings page.
 #### Review Component
 ![Screenshot](screenshots/ScreenShot1.png)
 
-#### Flag Modal
+#### Flag Report Modal
 ![Screenshot](screenshots/ScreenShot2.png)
       
 
