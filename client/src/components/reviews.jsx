@@ -3,6 +3,8 @@ import React from 'react';
 import axios from 'axios';
 import List from './list.jsx';
 import Stars from './stars.jsx';
+import styled from 'styled-components';
+import Report from './report.jsx';
 
 
 class Reviews extends React.Component {
@@ -12,39 +14,73 @@ class Reviews extends React.Component {
     this.state = {
       list_data: [],
       review_data: [],
-      // satisfied: 'I love this product!!',
-      // unhappy: 'Arrived late and damaged :('
+      filter_data: [],
+      query: '',
+      showModal: false,
     };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSearch = this.handleSearch.bind(this);
+    this.handleOpenModal = this.handleOpenModal.bind(this);
+    this.handleCloseModal = this.handleCloseModal.bind(this);
   }
 
   componentDidMount() {
-
-    const id = window.location.href.slice(31, -1)
+    const id = window.location.href.slice(31, -1);
     // console.log(id)
 
     axios.get(`/listings/${id}/reviews`)
       .then((response) => {
         // console.log(response)
         this.setState({
-          review_data: response.data
+          review_data: response.data,
+          filter_data: response.data,
         });
       })
-      .catch((error) => console.log(error))
+      .catch((error) => console.log(error));
 
     axios.get(`/listings/${id}/listings`)
       .then((response) => {
         // console.log(response)
         this.setState({
-          list_data: response.data
+          list_data: response.data,
         });
       })
-      .catch((error) => console.log(error))
+      .catch((error) => console.log(error));
   }
 
+  handleChange(event) {
+    this.setState({
+      query: event.target.value,
+    });
+  }
+
+  handleSearch(event) {
+    if (event.key === 'Enter') {
+      const array = this.state.review_data;
+      const query = this.state.query;
+      const filterReviews = array.filter(review =>
+        review.content.toLowerCase().includes(query.toLowerCase()));
+      this.setState({
+        filter_data: filterReviews,
+      });
+    }
+  }
+
+  handleOpenModal() {
+    let newState = this.state;
+    newState.showModal = true;
+    this.setState(newState);
+  }
+
+  handleCloseModal() {
+    let newState = this.state;
+    newState.showModal = false;
+    this.setState(newState);
+  }
 
   render() {
-
     // console.log(this.state.list_data)
+    // console.log(this.state.query)
     const arr = [ this.state.list_data.accuracy,
                   this.state.list_data.communication,
                   this.state.list_data.clean,
@@ -55,52 +91,46 @@ class Reviews extends React.Component {
     const starAvg = (arr) => arr.reduce((a,b) => a + b) / arr.length;
 
     const starTotalPercent = starAvg(arr) / 5 * 100;
-
     // console.log(starTotalPercent)
 
     return (
       <div>
         <div>
-
-        <div className="star-ratings-css">
-          <div className="star-ratings-css-top" style={{width: `${starTotalPercent}%`}}>
-            <span className="star-spacing">★</span><span className="star-spacing">★</span><span className="star-spacing">★</span><span className="star-spacing">★</span><span className="star-spacing">★</span>
-          </div>
-          <div className="star-ratings-css-bottom">
-            <span className="star-spacing">★</span><span className="star-spacing">★</span><span className="star-spacing">★</span><span className="star-spacing">★</span><span className="star-spacing">★</span>
-          </div>
+          <Line />
+          <ReviewBarTotal>
+            <NameStar>
+              <ReviewNameTotal><strong> {this.state.review_data.length} Reviews </strong></ReviewNameTotal>
+              <StarRateTotal>
+                <StarRateTotalTop style={{ width: `${starTotalPercent}%` }}>
+                  <StarSpacingTotal>★</StarSpacingTotal>
+                  <StarSpacingTotal>★</StarSpacingTotal>
+                  <StarSpacingTotal>★</StarSpacingTotal>
+                  <StarSpacingTotal>★</StarSpacingTotal>
+                  <StarSpacingTotal>★</StarSpacingTotal>
+                </StarRateTotalTop>
+                <StarRateTotalBottom>
+                  <StarSpacingTotal>★</StarSpacingTotal>
+                  <StarSpacingTotal>★</StarSpacingTotal>
+                  <StarSpacingTotal>★</StarSpacingTotal>
+                  <StarSpacingTotal>★</StarSpacingTotal>
+                  <StarSpacingTotal>★</StarSpacingTotal>
+                </StarRateTotalBottom>
+              </StarRateTotal>
+            </NameStar>
+            <br />
+            <SearchTotal>
+              <i className="fas fa-search"></i>
+              <Search type="text" placeholder="Search reviews" value={this.state.query} onChange={this.handleChange}  onKeyPress={ (e) => this.handleSearch(e) } />
+            </SearchTotal>
+          </ReviewBarTotal>
+          <Line />
+          <br />
+          <Stars list_data={this.state.list_data} />
+          <br />
+          <List review_data={this.state.filter_data} handleOpenModal={this.handleOpenModal} />
+          <br />
+          <Report showModal={this.state.showModal} handleCloseModal={this.handleCloseModal} />
         </div>
-
-        <br/>
-
-          <input type="text" className="_x49i5cv" id="p3-ReviewsSearchBox" name="p3-ReviewsSearchBox" placeholder="Search reviews" value=""/>
-        
-        <br/><br/> 
-        
-        <Stars list_data={this.state.list_data} />
-
-        <br/><br/>  
-          REVIEWS
-        <br/><br/> 
-        
-        <div> 
-          <List review_data={this.state.review_data} />
-        </div> 
-
-          <h3><strong>JenSpring50214</strong> "{this.state.satisfied}"</h3>
-          <p>
-            My new camera is awesome! 
-          </p>
-          <span>Verified Buyer 2010</span>
-        </div>
-        <div>
-          <h3><strong>SpaceCadetHero421</strong> "{this.state.unhappy}"</h3>
-          <p>
-            I bought this item from yourphotogrpahywarehouse hoping to replace my old starter DSLR. 
-          </p>
-          <span>Verified Buyer 2011</span>
-        </div>
-
       </div>
     );
   }
@@ -109,6 +139,83 @@ class Reviews extends React.Component {
 
 export default Reviews;
 
-        // <span className="FiveStar__FiveStarTop-hLclkH cJfAex" width="NaN"><span className="FiveStar__SingleStar-Vpwis bUXsVT">★</span><span className="FiveStar__SingleStar-Vpwis bUXsVT">★</span><span className="FiveStar__SingleStar-Vpwis bUXsVT">★</span><span className="FiveStar__SingleStar-Vpwis bUXsVT">★</span><span className="FiveStar__SingleStar-Vpwis bUXsVT">★</span></span>
 
-        // <svg viewBox="0 0 24 24" role="presentation" aria-hidden="true" focusable="false" style="height:1em;width:1em;display:block;fill:currentColor"><path d="m10.4 18.2c-4.2-.6-7.2-4.5-6.6-8.8.6-4.2 4.5-7.2 8.8-6.6 4.2.6 7.2 4.5 6.6 8.8-.6 4.2-4.6 7.2-8.8 6.6m12.6 3.8-5-5c1.4-1.4 2.3-3.1 2.6-5.2.7-5.1-2.8-9.7-7.8-10.5-5-.7-9.7 2.8-10.5 7.9-.7 5.1 2.8 9.7 7.8 10.5 2.5.4 4.9-.3 6.7-1.7v.1l5 5c .3.3.8.3 1.1 0s .4-.8.1-1.1" fill-rule="evenodd"></path></svg>
+// Styled Components
+
+const Line = styled.div`
+  border-bottom: 1px solid var(--color-divider, #EBEBEB) !important;
+  margin-top: 20px;
+  margin-bottom: 20px;
+`;
+
+const StarRateTotal = styled.div`
+  unicode-bidi: bidi-override;
+  color: rgb(216, 216, 216);
+  font-size: 23px;
+  width: 123px;
+  position: relative;
+  padding: 0;
+  text-shadow: 0px 0.5px 0 #a2a2a2;
+`;
+
+const StarRateTotalTop = styled.div`
+  color: rgb(0, 132, 137);
+  padding: 0;
+  position: absolute;
+  z-index: 0;  // was set to 1
+  display: block;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+`;
+
+const StarRateTotalBottom = styled.div`
+  padding: 0;
+  display: block;
+  z-index: 0;
+`;
+
+const StarSpacingTotal = styled.span`
+  margin-right: 2px;
+`;
+
+const ReviewBarTotal = styled.div`
+  display: flex;
+  justify-content: space-between
+  padding-top: 20px;
+`;
+  // justify-content: flex-start;
+
+const NameStar = styled.div`
+  display: flex;
+`;
+
+const SearchTotal = styled.div`
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  border: #c1c1c1 solid 1px;
+  padding: 0 7px;
+  i {
+    font-size: 13px;
+    margin: auto;
+  }
+`;
+
+const ReviewNameTotal = styled.h3`
+  font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #484848;
+  font-size: 24px;
+  margin: 0;
+  padding-right: 16px;
+`;
+
+const Search = styled.input`
+  width: auto;
+  height: 18px;
+  padding: 0 7px;
+  margin: auto;
+`;
+
+  // padding: 7px;
+  // margin-left: auto;
