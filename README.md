@@ -1,6 +1,10 @@
-# Project Name
+# Reviews Module
 
-Reviews-Module
+This repository is the reviews module of a cloned airbnb listings page.
+
+## Demo Screenshot
+
+
 
 ## Related Projects
 
