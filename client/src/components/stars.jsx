@@ -88,7 +88,7 @@ const Stars = (props) => {
               <StarSpacing>★</StarSpacing>
               <StarSpacing>★</StarSpacing>
             </StarRateBottom>
-          </StarRate>       
+          </StarRate>
         </LoneStarRate>
 
         <LoneStarRate>
@@ -183,7 +183,7 @@ const StarRateTop = styled.div`
   color: rgb(0, 132, 137);
   padding: 0;
   position: absolute;
-  z-index: 1;
+  z-index: 0;   // was set to 1
   display: block;
   top: 0;
   left: 0;

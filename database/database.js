@@ -11,12 +11,12 @@ const Listings = db.define('Listings', {
   },
   owner: Sequelize.STRING,
   avatar: Sequelize.STRING,
-  accuracy: Sequelize.INTEGER,
-  location: Sequelize.INTEGER,
-  communication: Sequelize.INTEGER,
-  checkin: Sequelize.INTEGER,
-  clean: Sequelize.INTEGER,
-  value: Sequelize.INTEGER,
+  accuracy: Sequelize.DECIMAL,
+  location: Sequelize.DECIMAL,
+  communication: Sequelize.DECIMAL,
+  checkin: Sequelize.DECIMAL,
+  clean: Sequelize.DECIMAL,
+  value: Sequelize.DECIMAL,
 });
 
 

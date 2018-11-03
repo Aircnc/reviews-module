@@ -4,6 +4,7 @@ import axios from 'axios';
 import List from './list.jsx';
 import Stars from './stars.jsx';
 import styled from 'styled-components';
+import Report from './report.jsx';
 
 
 class Reviews extends React.Component {
@@ -15,9 +16,12 @@ class Reviews extends React.Component {
       review_data: [],
       filter_data: [],
       query: '',
+      showModal: false,
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
+    this.handleOpenModal = this.handleOpenModal.bind(this);
+    this.handleCloseModal = this.handleCloseModal.bind(this);
   }
 
   componentDidMount() {
@@ -50,20 +54,29 @@ class Reviews extends React.Component {
     });
   }
 
-  handleSearch(e) {
-    if (e.key === 'Enter') {
+  handleSearch(event) {
+    if (event.key === 'Enter') {
       const array = this.state.review_data;
       const query = this.state.query;
-      // console.log(array);
       const filterReviews = array.filter(review =>
         review.content.toLowerCase().includes(query.toLowerCase()));
-      // console.log(filterReviews);
       this.setState({
         filter_data: filterReviews,
       });
     }
   }
 
+  handleOpenModal() {
+    let newState = this.state;
+    newState.showModal = true;
+    this.setState(newState);
+  }
+
+  handleCloseModal() {
+    let newState = this.state;
+    newState.showModal = false;
+    this.setState(newState);
+  }
 
   render() {
     // console.log(this.state.list_data)
@@ -85,39 +98,38 @@ class Reviews extends React.Component {
         <div>
           <Line />
           <ReviewBarTotal>
-            <ReviewNameTotal><strong> {this.state.review_data.length} Reviews </strong></ReviewNameTotal>
-            <StarRateTotal>
-              <StarRateTotalTop style={{ width: `${starTotalPercent}%` }}>
-                <StarSpacingTotal>★</StarSpacingTotal>
-                <StarSpacingTotal>★</StarSpacingTotal>
-                <StarSpacingTotal>★</StarSpacingTotal>
-                <StarSpacingTotal>★</StarSpacingTotal>
-                <StarSpacingTotal>★</StarSpacingTotal>
-              </StarRateTotalTop>
-              <StarRateTotalBottom>
-                <StarSpacingTotal>★</StarSpacingTotal>
-                <StarSpacingTotal>★</StarSpacingTotal>
-                <StarSpacingTotal>★</StarSpacingTotal>
-                <StarSpacingTotal>★</StarSpacingTotal>
-                <StarSpacingTotal>★</StarSpacingTotal>
-              </StarRateTotalBottom>
-            </StarRateTotal>        
+            <NameStar>
+              <ReviewNameTotal><strong> {this.state.review_data.length} Reviews </strong></ReviewNameTotal>
+              <StarRateTotal>
+                <StarRateTotalTop style={{ width: `${starTotalPercent}%` }}>
+                  <StarSpacingTotal>★</StarSpacingTotal>
+                  <StarSpacingTotal>★</StarSpacingTotal>
+                  <StarSpacingTotal>★</StarSpacingTotal>
+                  <StarSpacingTotal>★</StarSpacingTotal>
+                  <StarSpacingTotal>★</StarSpacingTotal>
+                </StarRateTotalTop>
+                <StarRateTotalBottom>
+                  <StarSpacingTotal>★</StarSpacingTotal>
+                  <StarSpacingTotal>★</StarSpacingTotal>
+                  <StarSpacingTotal>★</StarSpacingTotal>
+                  <StarSpacingTotal>★</StarSpacingTotal>
+                  <StarSpacingTotal>★</StarSpacingTotal>
+                </StarRateTotalBottom>
+              </StarRateTotal>
+            </NameStar>
             <br />
-            <Search type="text" placeholder="Search reviews" value={this.state.query} onChange={this.handleChange}  onKeyPress={ (e) => this.handleSearch(e) } />
+            <SearchTotal>
+              <i className="fas fa-search"></i>
+              <Search type="text" placeholder="Search reviews" value={this.state.query} onChange={this.handleChange}  onKeyPress={ (e) => this.handleSearch(e) } />
+            </SearchTotal>
           </ReviewBarTotal>
-        
           <Line />
-
           <br />
           <Stars list_data={this.state.list_data} />
-          <br /><br />
-
-          REVIEWS BELOW
-          <br /><br />
-          <div>
-            <List review_data={this.state.filter_data} />
-          </div>
-
+          <br />
+          <List review_data={this.state.filter_data} handleOpenModal={this.handleOpenModal} />
+          <br />
+          <Report showModal={this.state.showModal} handleCloseModal={this.handleCloseModal} />
         </div>
       </div>
     );
@@ -150,7 +162,7 @@ const StarRateTotalTop = styled.div`
   color: rgb(0, 132, 137);
   padding: 0;
   position: absolute;
-  z-index: 1;
+  z-index: 0;  // was set to 1
   display: block;
   top: 0;
   left: 0;
@@ -169,8 +181,25 @@ const StarSpacingTotal = styled.span`
 
 const ReviewBarTotal = styled.div`
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between
   padding-top: 20px;
+`;
+  // justify-content: flex-start;
+
+const NameStar = styled.div`
+  display: flex;
+`;
+
+const SearchTotal = styled.div`
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  border: #c1c1c1 solid 1px;
+  padding: 0 7px;
+  i {
+    font-size: 13px;
+    margin: auto;
+  }
 `;
 
 const ReviewNameTotal = styled.h3`
@@ -184,6 +213,9 @@ const ReviewNameTotal = styled.h3`
 const Search = styled.input`
   width: auto;
   height: 18px;
-  padding: 7px;
-  margin-left: auto;
+  padding: 0 7px;
+  margin: auto;
 `;
+
+  // padding: 7px;
+  // margin-left: auto;

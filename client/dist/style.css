@@ -75,6 +75,7 @@ body {
   padding: 7px;
 }
 
+
 /*flex total review*/
 .total-review-bar {
   display: flex;
@@ -89,6 +90,7 @@ body {
 .total-col-search {
   margin-left: auto;
 }
+
 
 /*flex single review*/
 .all-stars {
@@ -119,6 +121,7 @@ body {
 .lone-stars {
   margin: auto 0;
 }
+
 
 /*flex reviews users*/
 .review-users {

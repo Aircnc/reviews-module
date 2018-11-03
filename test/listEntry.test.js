@@ -1,7 +1,8 @@
 import React from 'react';
 import { shallow, mount, render } from 'enzyme';
-// import List from '../client/src/components/list.jsx';
+import List from '../client/src/components/list.jsx';
 import ListEntry from '../client/src/components/listEntry.jsx';
+// import ReadMoreButton from '../client/src/components/listEntry.jsx';
 
 const review = {
   "id": 281,
@@ -17,10 +18,20 @@ const review = {
 
 
 describe('Lists components mapping', () => {
-	it('check that there are more than one list entry for reviews', () => {
-		const listEntry = shallow(<ListEntry review={review} key={review.id}/>);
-		expect(listEntry.state('showMore')).toBe(false);
-		listEntry.find('button').simulate('click');
-		expect(listEntry.state('showMore')).toBe(true);
-	});
-})
+
+  it('check that there are more than one list entry for reviews', () => {
+    const listEntry = mount(<ListEntry review={review} key={review.id} />);
+    expect(listEntry.find('button')).toHaveLength(1);
+  });
+
+  it('check the instance of handleReadMore', () => {
+    const content = 'This test is supposed to expand content and change state showMore'
+    const wrapper = mount(<ListEntry review={review} key={review.id} />);
+    wrapper.find('button').simulate('click');
+    expect(wrapper.state('showMore')).toBe(true);
+  });
+});
+
+
+		// expect(listEntry.state('showMore')).toBe(false);
+		// expect(listEntry.state('showMore')).toBe(true);
