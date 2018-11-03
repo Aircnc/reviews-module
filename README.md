@@ -4,7 +4,7 @@ This repository is the reviews module of a cloned airbnb listings page.
 
 ## Demo Screenshot
 
-![Screenshot](/Screen Shot 2018-11-02 at 11.26.15 PM.png)
+![Screenshot](reviews-module/Screen Shot 2018-11-02 at 11.26.15 PM.png)
       
 
 ## Related Projects
