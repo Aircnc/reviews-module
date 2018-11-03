@@ -25,13 +25,9 @@ describe('Lists components mapping', () => {
   });
 
   it('check the instance of handleReadMore', () => {
-    const content = 'This test is supposed to expand content and change state showMore'
     const wrapper = mount(<ListEntry review={review} key={review.id} />);
     wrapper.find('button').simulate('click');
     expect(wrapper.state('showMore')).toBe(true);
   });
 });
 
-
-		// expect(listEntry.state('showMore')).toBe(false);
-		// expect(listEntry.state('showMore')).toBe(true);

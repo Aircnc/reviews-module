@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactModal from 'react-modal';
+import styled from 'styled-components';
 
 
 const Report = (props) => {
@@ -15,45 +16,33 @@ const Report = (props) => {
         style={modalStyle}>
         <div>
           <i class="fas fa-times" onClick={props.handleCloseModal} width="50" height="50"></i>
-          <h3 className="font">Do you want to anonymously report this review?</h3>
-          <h5 className="font">If so, please choose one of the following reasons. Learn more</h5>
-          <br/>
-          <form>
-            <fieldset className="fieldset">
-              <div className="reviewExitModal">
-                <label className="reviewExitchild" for="huey">Inappropriate Content</label>
-                <div className="reviewExitchild"></div>
-                <input className="reviewExitchild" type="radio" id="huey" name="drone" value="huey" checked />
-              </div>
-              <div>This review contains violent, graphic, promotional, or otherwise offensive content.</div>
-              <div className='reviewParentLine'>
-                <div className='reviewLine'></div>
-              </div>
-              <div className="reviewExitModal">
-                <label className="reviewExitchild" for="dewey">Dishonest or hateful content</label>
-                <div className="reviewExitchild"></div>
-                <input className="reviewExitchild" type="radio" id="dewey" name="drone" value="dewey" /> 
-              </div>
-              <div>This review is purposefully malicious and assaulting.</div>
-              <div className='reviewParentLine'>
-                <div className='reviewLine'></div>
-              </div>
-              <div className="reviewExitModal">
-                <label className="reviewExitchild" for="louie">Fake content</label>
-                <div className="reviewExitchild"></div>
-                <input className="reviewExitchild" type="radio" id="louie" name="drone" value="louie" />
-              </div>
-              <div>This review contains false information or may be fake.</div>
-              <div className='reviewParentLine'>
-                <div className='reviewLine'></div>
-              </div>
-            </fieldset>
-            <div className="reviewExitModal">
+          <Title>Do you want to anonymously report this review?</Title>
+          <Description>If so, please choose one of the following reasons. Learn more</Description>
+          <br />
+          <FormData>
+            <ReviewExitModal>
+              <label className="reviewExitchild" for="huey">Inappropriate Content</label>
+              <input className="reviewExitchild" type="radio" id="huey" name="drone" value="huey" checked />
+            </ReviewExitModal>
+            <div>This review contains violent, graphic, promotional, or otherwise offensive content.</div>
+            <Line />
+            <ReviewExitModal>
+              <label className="reviewExitchild" for="dewey">Dishonest or hateful content</label>
+              <input className="reviewExitchild" type="radio" id="dewey" name="drone" value="dewey" />
+            </ReviewExitModal>
+            <div>This review is purposefully malicious and assaulting.</div>
+            <Line />
+            <ReviewExitModal>
+              <label className="reviewExitchild" for="louie">Fake content</label>
+              <input className="reviewExitchild" type="radio" id="louie" name="drone" value="louie" />
+            </ReviewExitModal>
+            <div>This review contains false information or may be fake.</div>
+            <Line />
+            <ReviewExitModal>
               <div className="reviewExitchild reviewBackColor" onClick={props.handleCloseModal}>Back</div>
-              <div className="reviewExitchild"></div>
-              <button className="submitButton" onClick={props.handleCloseModal}>Submit</button>
-            </div>             
-          </form>
+              <SubmitButton onClick={props.handleCloseModal}>Submit</SubmitButton>
+            </ReviewExitModal>
+          </FormData>
 
         </div>
       </ReactModal>
@@ -61,10 +50,11 @@ const Report = (props) => {
   );
 };
 
- 
+
 export default Report;
 
-              // <legend >Select a maintenance drone</legend>
+
+// Styled Components
 
 const modalStyle = {
   overlay: {
@@ -84,37 +74,54 @@ const modalStyle = {
     border: 'none',
     background: '#fff',
     outline: 'none',
-    padding: '5px',
+    padding: '40px',
     width: '600px',
     height: '80vh',
     left: 'none',
     right: 'none',
     top: 'none',
     bottom: 'none',
-    padding: '40px',
-    h3: {fontSize: '30px'},
-    h5: {fontSize: '20px'},
-    form: {
-      height: 'calc(100% - 250px)',
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'space-between',
-    },
-    reviewExitModal: {
-      display: 'flex',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-    },
-    submitButton: {
-      padding: '20px 30px',
-      fontSize: '23px',
-      backgroundColor: 'rgb(0, 132, 137)',
-      fontWeight: 'bold',
-      color: 'white',
-      borderRadius: '6px',
-      border: '1px solid rgb(0, 132, 137)',
-    },
   },
 };
 
+const Title = styled.h3`
+  font-size: 30px;
+  margin: 25px 0;
+`;
+
+const Description = styled.h5`
+  font-size: 20px;
+  margin: 20px 0;
+`;
+
+const FormData = styled.form`
+  height: calc(100% - 250px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`;
+
+const ReviewExitModal = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  padding: 12px 0;
+`;
+
+const SubmitButton = styled.button`
+  padding: 15px 25px;
+  font-size: 20px;
+  background-color: rgb(0, 132, 137);
+  font-weight: bold;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid rgb(0, 132, 137);
+`;
+
+const Line = styled.div`
+  border-bottom: 1px solid var(--color-divider, #EBEBEB) !important;
+  margin-top: 20px;
+  margin-bottom: 20px;
+`;
 
