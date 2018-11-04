@@ -39,7 +39,7 @@ const Report = (props) => {
             <div>This review contains false information or may be fake.</div>
             <Line />
             <ReviewExitModal>
-              <div className="reviewExitchild reviewBackColor" onClick={props.handleCloseModal}>Back</div>
+              <BackButton onClick={props.handleCloseModal}>Back</BackButton>
               <SubmitButton onClick={props.handleCloseModal}>Submit</SubmitButton>
             </ReviewExitModal>
           </FormData>
@@ -107,6 +107,11 @@ const ReviewExitModal = styled.div`
   align-items: center;
   font-size: 20px;
   padding: 12px 0;
+`;
+
+const BackButton = styled.div`
+  font-weight: bold;
+  color: rgb(0, 132, 137);
 `;
 
 const SubmitButton = styled.button`
