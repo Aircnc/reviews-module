@@ -7,7 +7,7 @@ const dist_dir = path.join(__dirname, './client/dist');
 
 module.exports = {
   // context: __dirname + '/client/src/',
-  entry: `${src_dir}/index.js`,
+  entry: `${src_dir}/index.jsx`,
   module: {
     rules: [
       {

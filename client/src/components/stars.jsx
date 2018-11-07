@@ -165,6 +165,7 @@ const LoneStarRate = styled.div`
 const LoneNames = styled.div`
   margin: auto 0;
   font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
   color: #484848;
 `;
 
