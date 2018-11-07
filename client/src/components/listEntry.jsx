@@ -51,15 +51,17 @@ export default ListEntry;
 
 const Text = styled.div`
   font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
   color: #484848;
   padding: 0.2em 0;
-  line-height: 1em;
 `;
+// line-height: 1em;
 
 const TextTruncate = styled.div`
   font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
   color: #484848;
-  max-height: 2.4em;
+  max-height: 2.5em;
   overflow: hidden;
 `;
 
@@ -80,6 +82,7 @@ const ReviewAvatar = styled.img`
 
 const ReviewName = styled.div`
   margin-right: 10px;
+  font-size: 16px;
 `;
 
 const Line = styled.div`
@@ -93,13 +96,18 @@ const FlagSvg = styled.svg`
   fill: rgb(118, 118, 118);
   height: 14px;
   width: 14px;
+  :hover {
+      cursor: pointer;
+    }
 `;
 
 const ReadMoreButton = styled.button`
   color: rgb(0, 132, 137);
+  font-size: 16px;
   font-weight: 800;
   margin-top: 1em;
   padding: 3px 8px;
   position: relative;
-  left: 90%;
+  left: 85%;
+  border: none;
 `;

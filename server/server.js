@@ -1,6 +1,7 @@
 const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
+const cors = require('cors');
 const db = require('../database/database.js');
 
 const app = express();
@@ -8,10 +9,10 @@ const port = process.env.PORT || 3004;
 
 
 app.use(morgan('dev'));
-app.use('/listings/:id', express.static(path.join(__dirname, '../client/dist')));
+app.use(express.static(path.join(__dirname, '../client/dist')));
+// '/listings/:id',
 
-
-app.get('/listings/:id/reviews', (request, response) => {
+app.get('/listings/:id/reviews', cors(), (request, response) => {
   const listId = request.params.id;
   // console.log('this works', listId);
   db.findReviews(listId, (error, results) => {
@@ -24,7 +25,7 @@ app.get('/listings/:id/reviews', (request, response) => {
 });
 
 
-app.get('/listings/:id/listings', (request, response) => {
+app.get('/listings/:id/listings', cors(), (request, response) => {
   const listId = request.params.id;
   db.findListing(listId, (error, results) => {
     if (error) {

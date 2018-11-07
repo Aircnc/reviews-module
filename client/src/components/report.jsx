@@ -15,7 +15,7 @@ const Report = (props) => {
         // overlayClassName="overlay"
         style={modalStyle}>
         <div>
-          <i class="fas fa-times" onClick={props.handleCloseModal} width="50" height="50"></i>
+          <i className="fas fa-times" onClick={props.handleCloseModal} width="50" height="50"></i>
           <Title>Do you want to anonymously report this review?</Title>
           <Description>If so, please choose one of the following reasons. Learn more</Description>
           <br />
@@ -59,12 +59,16 @@ export default Report;
 const modalStyle = {
   overlay: {
     display: 'flex',
-    position: 'fixed', //'absolute',
+    position: 'fixed',
+    zIndex: 3,
     top: 0,
     left: 0,
     right: 0,
     bottom: 0,
     backgroundColor: 'rgb(0,0,0,0.75)',
+    i: {
+      fontSize: '25px',
+    },
   },
   content: {
     fontFamily: 'Circular,"Helvetica Neue",Helvetica,Arial,sans-serif',
@@ -76,7 +80,7 @@ const modalStyle = {
     outline: 'none',
     padding: '40px',
     width: '600px',
-    height: '80vh',
+    height: '90vh',
     left: 'none',
     right: 'none',
     top: 'none',
@@ -112,6 +116,9 @@ const ReviewExitModal = styled.div`
 const BackButton = styled.div`
   font-weight: bold;
   color: rgb(0, 132, 137);
+  :hover {
+      cursor: pointer;
+    }
 `;
 
 const SubmitButton = styled.button`
