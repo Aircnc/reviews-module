@@ -1,10 +1,10 @@
 // import ReactDom from 'react-dom';
 import React from 'react';
-import axios from 'axios';
-import List from './list.jsx';
-import Stars from './stars.jsx';
-import Report from './report.jsx';
 import styled from 'styled-components';
+import axios from 'axios';
+import List from './list';
+import Stars from './stars';
+import Report from './report';
 
 
 class Reviews extends React.Component {
@@ -26,11 +26,8 @@ class Reviews extends React.Component {
 
   componentDidMount() {
     const id = window.location.href.slice(31, -1);
-    // console.log(id)
-
-    axios.get(`/listings/${id}/reviews`)
+    axios.get(`http://localhost:3004/listings/${id}/reviews`)
       .then((response) => {
-        // console.log(response)
         this.setState({
           review_data: response.data,
           filter_data: response.data,
@@ -38,7 +35,7 @@ class Reviews extends React.Component {
       })
       .catch((error) => console.log(error));
 
-    axios.get(`/listings/${id}/listings`)
+    axios.get(`http://localhost:3004/listings/${id}/listings`)
       .then((response) => {
         // console.log(response)
         this.setState({

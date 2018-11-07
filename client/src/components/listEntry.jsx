@@ -100,6 +100,4 @@ const ReadMoreButton = styled.button`
   font-weight: 800;
   margin-top: 1em;
   padding: 3px 8px;
-  position: relative;
-  left: 90%;
 `;
