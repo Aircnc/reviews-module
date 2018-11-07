@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1541225343543" clover="3.2.0">
-  <project timestamp="1541225343543" name="All files">
+<coverage generated="1541281059575" clover="3.2.0">
+  <project timestamp="1541281059576" name="All files">
     <metrics statements="75" coveredstatements="70" conditionals="6" coveredconditionals="5" methods="24" coveredmethods="19" elements="105" coveredelements="94" complexity="0" loc="75" ncloc="75" packages="2" files="7" classes="7">
       <package name="client.src.components">
         <metrics statements="72" coveredstatements="67" conditionals="6" coveredconditionals="5" methods="23" coveredmethods="18"/>
-        <file name="list.jsx" path="/Users/Li/Desktop/reviews-module/client/src/components/list.jsx">
+        <file name="list.jsx" path="/Users/luantran/Documents/FEC/FEC-app/reviews-module/client/src/components/list.jsx">
           <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
           <line num="6" count="3" type="stmt"/>
           <line num="7" count="6" type="stmt"/>
           <line num="9" count="4" type="stmt"/>
         </file>
-        <file name="listEntry.jsx" path="/Users/Li/Desktop/reviews-module/client/src/components/listEntry.jsx">
+        <file name="listEntry.jsx" path="/Users/luantran/Documents/FEC/FEC-app/reviews-module/client/src/components/listEntry.jsx">
           <metrics statements="14" coveredstatements="14" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
           <line num="7" count="3" type="stmt"/>
           <line num="9" count="3" type="stmt"/>
@@ -27,13 +27,13 @@
           <line num="94" count="3" type="stmt"/>
           <line num="101" count="3" type="stmt"/>
         </file>
-        <file name="report.jsx" path="/Users/Li/Desktop/reviews-module/client/src/components/report.jsx">
+        <file name="report.jsx" path="/Users/luantran/Documents/FEC/FEC-app/reviews-module/client/src/components/report.jsx">
           <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
           <line num="5" count="2" type="stmt"/>
           <line num="6" count="6" type="stmt"/>
           <line num="69" count="2" type="stmt"/>
         </file>
-        <file name="reviews.jsx" path="/Users/Li/Desktop/reviews-module/client/src/components/reviews.jsx">
+        <file name="reviews.jsx" path="/Users/luantran/Documents/FEC/FEC-app/reviews-module/client/src/components/reviews.jsx">
           <metrics statements="41" coveredstatements="36" conditionals="2" coveredconditionals="1" methods="15" coveredmethods="10"/>
           <line num="12" count="7" type="stmt"/>
           <line num="14" count="7" type="stmt"/>
@@ -77,7 +77,7 @@
           <line num="205" count="1" type="stmt"/>
           <line num="213" count="1" type="stmt"/>
         </file>
-        <file name="stars.jsx" path="/Users/Li/Desktop/reviews-module/client/src/components/stars.jsx">
+        <file name="stars.jsx" path="/Users/luantran/Documents/FEC/FEC-app/reviews-module/client/src/components/stars.jsx">
           <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
           <line num="5" count="2" type="stmt"/>
           <line num="7" count="6" type="stmt"/>
@@ -94,11 +94,11 @@
       </package>
       <package name="test">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <file name="setupTest.js" path="/Users/Li/Desktop/reviews-module/test/setupTest.js">
+        <file name="setupTest.js" path="/Users/luantran/Documents/FEC/FEC-app/reviews-module/test/setupTest.js">
           <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
           <line num="5" count="6" type="stmt"/>
         </file>
-        <file name="sum.js" path="/Users/Li/Desktop/reviews-module/test/sum.js">
+        <file name="sum.js" path="/Users/luantran/Documents/FEC/FEC-app/reviews-module/test/sum.js">
           <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
           <line num="2" count="1" type="stmt"/>
           <line num="4" count="1" type="stmt"/>

@@ -28,9 +28,9 @@ class Reviews extends React.Component {
     const id = window.location.href.slice(31, -1);
     // console.log(id)
 
-    axios.get(`/listings/${id}/reviews`)
+    axios.get(`http://127.0.0.1:3004/listings/${id}/reviews`)
       .then((response) => {
-        // console.log(response)
+         console.log(response)
         this.setState({
           review_data: response.data,
           filter_data: response.data,
@@ -38,7 +38,7 @@ class Reviews extends React.Component {
       })
       .catch((error) => console.log(error));
 
-    axios.get(`/listings/${id}/listings`)
+    axios.get(`http://127.0.0.1:3004/listings/${id}/listings`)
       .then((response) => {
         // console.log(response)
         this.setState({

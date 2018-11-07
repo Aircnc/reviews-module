@@ -1,5 +1,5 @@
 TN:
-SF:/Users/Li/Desktop/reviews-module/client/src/components/list.jsx
+SF:/Users/luantran/Documents/FEC/FEC-app/reviews-module/client/src/components/list.jsx
 FN:6,(anonymous_0)
 FN:8,(anonymous_1)
 FNF:2
@@ -15,7 +15,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/Users/Li/Desktop/reviews-module/client/src/components/listEntry.jsx
+SF:/Users/luantran/Documents/FEC/FEC-app/reviews-module/client/src/components/listEntry.jsx
 FN:6,(anonymous_0)
 FN:15,(anonymous_1)
 FN:16,(anonymous_2)
@@ -50,7 +50,7 @@ BRF:4
 BRH:4
 end_of_record
 TN:
-SF:/Users/Li/Desktop/reviews-module/client/src/components/report.jsx
+SF:/Users/luantran/Documents/FEC/FEC-app/reviews-module/client/src/components/report.jsx
 FN:5,(anonymous_0)
 FNF:1
 FNH:1
@@ -64,7 +64,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/Users/Li/Desktop/reviews-module/client/src/components/reviews.jsx
+SF:/Users/luantran/Documents/FEC/FEC-app/reviews-module/client/src/components/reviews.jsx
 FN:11,(anonymous_0)
 FN:27,(anonymous_1)
 FN:32,(anonymous_2)
@@ -146,7 +146,7 @@ BRF:2
 BRH:1
 end_of_record
 TN:
-SF:/Users/Li/Desktop/reviews-module/client/src/components/stars.jsx
+SF:/Users/luantran/Documents/FEC/FEC-app/reviews-module/client/src/components/stars.jsx
 FN:5,(anonymous_0)
 FNF:1
 FNH:1
@@ -168,7 +168,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/Users/Li/Desktop/reviews-module/test/setupTest.js
+SF:/Users/luantran/Documents/FEC/FEC-app/reviews-module/test/setupTest.js
 FNF:0
 FNH:0
 DA:5,6
@@ -178,7 +178,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/Users/Li/Desktop/reviews-module/test/sum.js
+SF:/Users/luantran/Documents/FEC/FEC-app/reviews-module/test/sum.js
 FN:1,sum
 FNF:1
 FNH:1
