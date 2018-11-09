@@ -27,8 +27,8 @@ class Reviews extends React.Component {
   componentDidMount() {
     const id = window.location.href.slice(31, -1);
     // console.log(id)
-
-    axios.get(`http://localhost:3004/listings/${id}/reviews`)
+// http://localhost:3004
+    axios.get(`/listings/${id}/reviews`)
       .then((response) => {
         // console.log(response)
         this.setState({
@@ -38,7 +38,8 @@ class Reviews extends React.Component {
       })
       .catch((error) => console.log(error));
 
-    axios.get(`http://localhost:3004/listings/${id}/listings`)
+// http://localhost:3004
+    axios.get(`/listings/${id}/listings`)
       .then((response) => {
         // console.log(response)
         this.setState({
