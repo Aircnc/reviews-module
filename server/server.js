@@ -6,6 +6,7 @@ const db = require('../database/database.js');
 
 const app = express();
 const port = process.env.PORT || 3004;
+const host = '0.0.0.0';
 
 
 app.use(morgan('dev'));
@@ -40,6 +41,5 @@ app.get('/listings/:id/listings', cors(), (request, response) => {
 });
 
 
-app.listen(port, () => {
-  console.log(`server running at: http://localhost:${port}`);
-});
+app.listen(port, host);
+console.log(`server running at: http://${host}:${port}`);

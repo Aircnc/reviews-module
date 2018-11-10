@@ -1,0 +1,57 @@
+version: '3'
+
+services:
+
+  reviews:
+    build: ./
+    depends_on:
+      - 'database'
+    ports:
+      - '3004:3004'
+
+  database:
+    build: ./database/
+    ports:
+      - '3306:3306'
+    # image: mysql:5.7
+
+# For EC2 docer-compose up -d
+
+# version: '3'
+
+# services:
+
+#   reviews:
+#     image: lison12/reviews
+#     depends_on:
+#       - 'database'
+#     ports:
+#       - '80:3004'
+
+#   database:
+#     image: lison12/database
+#     ports:
+#       - '3306:3306'
+
+
+# Docker commands
+
+# docker-compose down --rmi all
+
+# docker-compose up -d
+
+
+
+# removes all images
+
+# docker rmi $(docker images -q)   
+
+
+
+# removes all containers
+
+# docker rm $(docker ps -aq)  (can add -f)
+
+
+# $ docker run -d -p 80:3004 --name reviews1 lison12/reviews
+

@@ -25,7 +25,9 @@ class Reviews extends React.Component {
   }
 
   componentDidMount() {
-    const id = window.location.href.slice(31, -1);
+    // const id = window.location.href.slice(31, -1);
+    const url = window.location.href;
+    const id = Number(url.split('/')[url.split('/').length -2]);
     // console.log(id)
 // http://localhost:3004
     axios.get(`/listings/${id}/reviews`)
