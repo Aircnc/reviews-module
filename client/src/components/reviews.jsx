@@ -28,11 +28,10 @@ class Reviews extends React.Component {
     // const id = window.location.href.slice(31, -1);
     const url = window.location.href;
     const id = Number(url.split('/')[url.split('/').length -2]);
-    // console.log(id)
+    console.log(id);
 // http://localhost:3004
     axios.get(`/listings/${id}/reviews`)
       .then((response) => {
-        // console.log(response)
         this.setState({
           review_data: response.data,
           filter_data: response.data,
@@ -82,7 +81,7 @@ class Reviews extends React.Component {
   }
 
   render() {
-    // console.log(this.state.list_data)
+    // console.log(this.state.list_data, '>>>>>data');
     // console.log(this.state.query)
     const arr = [ this.state.list_data.accuracy,
                   this.state.list_data.communication,
@@ -90,11 +89,10 @@ class Reviews extends React.Component {
                   this.state.list_data.location,
                   this.state.list_data.checkin,
                   this.state.list_data.value ];
-    
-    const starAvg = (arr) => arr.reduce((a,b) => a + b) / arr.length;
 
-    const starTotalPercent = starAvg(arr) / 5 * 100;
-    // console.log(starTotalPercent)
+    const starAvg = arr.reduce((a, b) => Number(a) + Number(b)) / arr.length;
+
+    const starTotalPercent = starAvg * 100 / 5;
 
     return (
       <div>

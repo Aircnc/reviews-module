@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 
 const sequelize = new Sequelize('reviews_module', 'root', '', {
-  host: 'database',
+  host: 'localhost',
   dialect: 'mysql',
   operatorsAliases: false,
   logging: false,

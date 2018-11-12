@@ -64,11 +64,12 @@ const findReviews = (id, callback) => {
 
 
 const findListing = (id, callback) => {
-  Listings.findById(id)
+  Listings.findByPk(id)
     .then((results) => { callback(null, results); })
     .catch((error) => { callback(error, null); });
 };
 
+// Listings.findById(id)  // deprecated, please use Model.findByPk instead
 
 // .then(() => { db.close(); });
 

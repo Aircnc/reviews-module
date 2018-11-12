@@ -9,7 +9,7 @@
   },
   "scripts": {
     "seed": "mysql -u root < database/schema.sql && node database/seed.js",
-    "dev": "webpack -d --watch",
+    "dev": "webpack -d --watch --mode=production",
     "start": "node ./server/server.js",
     "test": "jest --coverage",
     "lint": "eslint --ignore-path .gitignore .",
@@ -40,6 +40,7 @@
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.4",
+    "compression-webpack-plugin": "^2.0.0",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.6.0",
     "eslint": "^5.8.0",
